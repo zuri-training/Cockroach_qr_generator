@@ -24,7 +24,7 @@ No access to use until registered
 Full access to the platform
 Allow setting on what should happen when qr is scanned - give at least 2 options
 Allow user to download (allow png, jpeg and pdf download format), or share code by email or social media
-Allow user save data and come back to it
+Allow user save data and come back to it.
 
 
 
