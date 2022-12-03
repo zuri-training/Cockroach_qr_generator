@@ -53,7 +53,7 @@ Why type when you can scan?
 We aim to design and build a platform that generates a QR code when users upload a link or PDF.
 QR codes consist of black modules arranged in a square pattern on a white background, the color of the modules can be customize.
 QR codes can be two dimensional, meaning it can be scanned in two directions (horizontal or vertical) or a one dimensional barcode, this requires a more sophisticated reader.
-There are two types of QR codes; static and dynamic. The digital information in static QR codes are hard-coded and cannot be changed but in dynamic QR codes, the information can be edited even after the QR code is deployed. 
+There are two types of QR codes; static and dynamic. The digital information in static QR codes are hard-coded and cannot be changed but in dynamic QR codes, the information can be edited even after the QR code is deployed.For this project,we wil be using the Static QR code. 
 
 QR_gen is a website that is used to create or generate these QR codes that store digital information. The user upload the PDF file or a link to generate the QR code, which can be shared or downloaded. The user can also save data for download later.
 
