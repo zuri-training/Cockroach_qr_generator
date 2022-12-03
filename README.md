@@ -5,10 +5,11 @@ qr_gen
 * Project description
 * Features requested
 * Design
-  * documentation
-  * Figma
+* documentation
+* Figma
 * Frameworks used in project
 * Contributors
+
   
 
 ### Description
@@ -71,6 +72,12 @@ Authenticated Users
 2. New dashboard with: a new set of nav bars( just two- url,pdf)
 3. A download button that would enable users to share with other platforms such as email or Social Media 
 4. A page for users to track all their generated codes therefore a “saved” documents folder that they can come back to.
+
+DESIGN
+figma link to access the design sketch and mood board(https://www.figma.com/file/MU63D4eol1BFrkcQOwnYqD/Qr-Gen?node-id=0%3A1&t=PzYInRi6d6QxAnz7-1)
+data schema link outlining what we are trying to achieve with this project(https://drawsql.app/teams/gr-gen/diagrams/database-schema)
+
+
 
 ##### User case Scenario 
 I am a HR manager, I set up my account with the application. Then I paste my LinkedIn link and a QR code is generated for me. I have the option of downloading the code as PNG,JPEG,PDF or sharing code by email or social media.
