@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+* {
+  padding: 0rem;
+  margin: 0rem;
+  box-sizing: border-box;
+}
+.header {
+  padding: 1rem 3rem;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.1);
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+}
+li {
+  list-style-type: none;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #101010;
+  cursor: pointer;
+}
+.btn {
+  border: none;
+  background: none;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: right;
+  cursor: pointer;
+}
+.login {
+  color: #5683f6;
+}
+.register {
+  padding: 12px 18px;
+  color: #fbfbfb;
+  background: #5683f6;
+  border-radius: 10px;
+  margin-left: 3rem;
+}
+.heroSection {
+  display: flex;
+  justify-content: center;
+}
+.heroText {
+  margin: 8rem 0rem 4rem 4rem;
+  width: 100%;
+}
+.heroText h1 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 72px;
+  color: #000000;
+  margin-bottom: 2rem;
+}
+.heroDescription {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #101010;
+  width: 90%;
+  margin-bottom: 1rem;
+}
+.heroSmallText {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #101010;
+  margin-bottom: 3rem;
+}
+.create {
+  padding: 12px 18px;
+  color: #fbfbfb;
+  background: #5683f6;
+  border-radius: 10px;
+}
+.show {
+  background: #dde6fd;
+  padding: 2rem 5rem;
+}
+.showContainer {
+  background: rgba(207, 207, 207, 0.26);
+  border: 1px solid #cfcfcf;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 5rem;
+  /* gap: 2rem; */
+}
+.showBox {
+  background: rgba(207, 207, 207, 0.26);
+  box-shadow: 0px 3.42857px 3.42857px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+.showBox p {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13.7143px;
+  line-height: 21px;
+  text-align: right;
+  letter-spacing: 0.514286px;
+  color: #606060;
+}
