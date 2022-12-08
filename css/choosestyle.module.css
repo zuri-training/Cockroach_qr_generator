@@ -1,0 +1,390 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body{
+  font-family: "Poppins", sans-serif;
+
+}
+main {
+  background-color: #f5f5f5;
+  padding: 2rem 1rem;
+  min-height: 100vh;
+}
+
+.section1 {
+  display: flex;
+  justify-content: space-between;
+  width: 16rem;
+  align-items: center;
+  margin: auto;
+}
+.stages {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.first-stage {
+  width: 3rem;
+  margin: auto;
+  border-radius: 50%;
+  padding: 0.5rem;
+  border: 3px solid #5683f6;
+  font-size: 16px;
+  margin-bottom: 0.5rem;
+}
+.colored {
+  color: #5683f6;
+}
+.border {
+  background-color: #d9d9d9;
+  border: 3px solid #d9d9d9;
+}
+.second-stage {
+  font-size: 16px;
+  font-weight: 300;
+}
+.arrow-1 {
+  width: 20%;
+  height: 20%;
+}
+.main-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 1.5rem;
+}
+.qr-type {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.line {
+  background-color: black;
+  width: 7rem;
+  height: 1px;
+}
+.heading2 {
+  margin: 1rem;
+  font-size: 18px;
+  color: rgb(136, 133, 133);
+  font-weight: 300;
+}
+.uploads {
+  display: flex;
+  justify-content: space-around;
+}
+.container > div {
+  text-align: center;
+  margin-right: 2px;
+}
+.container > div > h3 {
+  font-size: 16px;
+}
+.container > div > p {
+  font-size: 14px;
+}
+.container {
+  display: flex;
+  border: 2px solid #5683f6;
+  border-radius: 8px;
+  height: 50px;
+}
+.img-container {
+  width: 25%;
+  margin-right: 8px;
+}
+.upload-form {
+  margin-top: 40px;
+}
+.input_ {
+  width: 25rem;
+  border: none;
+}
+.input_:focus {
+  outline: 0;
+}
+.url-generate {
+  border: 1px solid #c7c6c680;
+  background-color: #ffffff;
+  margin-top: 5px;
+}
+.section3 {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+.section3 > h2 {
+  font-size: 18px;
+  color: #5683f6;
+  margin-bottom: 1rem;
+}
+hr {
+  width: 70%;
+}
+.section3 > img {
+  width: 70%;
+  margin: 2rem auto;
+}
+.back {
+  display: flex;
+  background-color: #ffffff;
+  height: 3rem;
+  align-items: center;
+}
+.back-arrow {
+  margin-left: 5rem;
+  margin-right: 1rem;
+}
+.back-word {
+  font-weight: 300;
+}
+.button {
+  background-color: #5683f6;
+  color: #f5f5f5;
+  border: none;
+  height: 2.5rem;
+  width: 8rem;
+  border-radius: 12px;
+}
+.flex {
+  display: flex;
+  align-items: center;
+}
+.generate-div {
+  background-color: white;
+  box-shadow: 2px 2px 2px #c7c6c680;
+  width: 19rem;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px;
+  margin-top: 5px;
+}
+.generate-div > p {
+  color: #d9d9d9;
+}
+.pdf {
+  margin-left: 3rem;
+}
+.colored-first-stage {
+  background-color: #f5f5f5;
+  border: 2px solid #5683f6;
+}
+.download-section1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+}
+.download-section1 > h3 {
+  margin: 0.5rem 0;
+}
+.choose {
+  margin-top: 1rem;
+  width: 38rem;
+  display: flex;
+  justify-content: space-between;
+}
+.choose > .share {
+  border-radius: 12px;
+  background-color: #f5f5f5;
+  color: #5683f6;
+  border: 2px solid #5683f6;
+  height: 2.5rem;
+  width: 8rem;
+  font-weight: 600;
+}
+.back-prev {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+  background-color: #ffffff;
+  align-items: center;
+}
+.finish {
+  margin-right: 5rem;
+}
+.display{
+  display: none;
+}
+.popup{
+  background-color: #d9d9d9;
+  height: 50vh;
+  width: 45vw;
+  position: absolute;
+  top: 40%;
+  text-align: center;
+
+}
+.popup>div{
+  width: 100%;
+  text-align: end;
+}
+.fa-x{
+  margin-top: 2rem;
+  margin-right: 2rem;
+  color: #5683f6;
+}
+.popup>h4{
+  margin: 8vh 0;
+  color: #5683f6;
+  
+}
+.popup>.icons>i{
+  color: #5683f6;
+  margin: 0 2rem;
+}
+@media screen and (max-width: 900px) {
+  .main-section {
+    flex-direction: column;
+    padding: 3rem 0.5rem;
+  }
+  .popup{
+    width: 90vw;
+    top: 20%;
+  }
+  .line {
+    width: 4rem;
+  }
+  .container {
+    height: 70px;
+    margin-left: 3px;
+  }
+  .url-generate {
+    width: 17rem;
+  }
+  .input_ {
+    width: 10rem;
+  }
+  .input_::placeholder {
+    font-size: 12px;
+  }
+  .back-arrow {
+    margin-left: 1rem;
+  }
+  .flex {
+    flex-direction: column;
+  }
+  .generate {
+    width: 6rem;
+  }
+  .pdf {
+    margin-top: 1rem;
+  }
+  .url-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .pdf-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .form2 {
+    display: flex;
+    justify-content: center;
+  }
+  .section3 {
+    margin-top: 2rem;
+  }
+  .choose {
+    margin-top: 20vh;
+    width: 90vw;
+  }
+  .back-prev {
+    margin-top: 10vh;
+  }
+  .finish {
+    margin-right:0;
+  }
+  .share {
+    width: 5rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .uploads {
+    flex-direction: column;
+  }
+  .container {
+    margin-top: 2rem;
+  }
+  .choose {
+    margin-top: 5vh;
+  }
+  .popup>.icons>i{
+    margin:0 .5rem;
+  }  
+
+}
