@@ -16,15 +16,18 @@
     <header class="header">
         <nav class="nav">
             <img src="./assets/logo.png" alt='logo' />
-            <ul>
+            <ul id="ul">
                 <li> <a href="#"> QR code</a></li>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Contact Us</a></li>
+                <div>
+                    <button class="btn"><a class="btn login" href="#">Login</a></button>
+                    <button class="btn"><a class="btn register" href="#">Register</a></button>
+                    <button id="close">X</button>
+
+                </div>
             </ul>
-            <div>
-                <button class="btn"><a class="btn login" href="#">Login</a></button>
-                <button class="btn"><a class="btn register" href="#">Register</a></button>
-            </div>
+            <button id="menu">Menu</button>
         </nav>
     </header>
     <section class="heroSection">
@@ -120,24 +123,24 @@
                     <p>This defines what your code does</p>
                 </div>
             </div>
-            <hr>
+            <!-- <hr> -->
             <div class="diamondContainer">
                 <div class="diamond">
                     <p>2</p>
                 </div>
                 <div>
-                    <p>Choose QR code type</p>
-                    <p>This defines what your code does</p>
+                    <p>Fill in the required fields</p>
+                    <p>Put a link or upload a pdf</p>
                 </div>
             </div>
-            <hr>
+            <!-- <hr> -->
             <div class="diamondContainer">
                 <div class="diamond">
                     <p>3</p>
                 </div>
                 <div>
-                    <p>Choose QR code type</p>
-                    <p>This defines what your code does</p>
+                    <p>Download, share or add to list</p>
+                    <p>download or share your code</p>
                 </div>
             </div>
         </div>
@@ -156,6 +159,7 @@
             </ul>
         </div>
     </footer>
+    <script src="./js/index.js"></script>
 </body>
 
 </html>

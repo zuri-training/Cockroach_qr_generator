@@ -17,11 +17,14 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 4rem;
 }
 ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  align-items: flex-end;
   gap: 4rem;
+  flex-basis: 75%;
 }
 li {
   list-style-type: none;
@@ -55,6 +58,9 @@ li {
   background: #5683f6;
   border-radius: 10px;
   margin-left: 3rem;
+}
+#menu,#close{
+  display:none;
 }
 .heroSection {
   display: flex;
@@ -252,12 +258,13 @@ li {
 .containerDiamond {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 1.5rem;
 }
 .diamond {
   position: relative;
-  height: 100px;
-  width: 100px;
+  height: 130px;
+  width: 130px;
   line-height: 100px;
   text-align: center;
   margin: 10px 40px;
@@ -276,8 +283,8 @@ li {
   top: 10px;
   left: 10px;
   content: "";
-  height: calc(100% - 22px);
-  width: calc(100% - 22px);
+  height: calc(100% - 42px);
+  width: calc(100% - 42px);
   border: 10px solid #5683f6;
   transform: rotateX(45deg) rotateZ(45deg);
 }
@@ -288,6 +295,9 @@ li {
   font-size: 60px;
   line-height: 90px;
   color: #606060;
+  position: absolute;
+  bottom: 20%;
+  left:35%;
 }
 footer {
   padding: 5rem;
@@ -325,6 +335,11 @@ footer {
   line-height: 24px;
   letter-spacing: 0.6px;
   color: #606060;
+}
+@media screen and (max-width: 1070px){
+  .nav img {
+    width: 20%;
+  }
 }
 @media screen and (max-width: 1000px) {
   .header {
@@ -417,6 +432,9 @@ footer {
   .show {
     margin-top: 1rem;
   }
+  footer{
+    padding: 2rem;
+  }
 }
 @media screen and (max-width: 790px) {
     .showContainer{
@@ -425,13 +443,56 @@ footer {
       gap: 2rem;
     }
 }
+@media screen and (max-width: 770px){
+  .nav{
+    justify-content: space-between;
+  }
+  #ul{
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 10%;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #ffffff;
+    padding: 2rem;
+    text-align: center;
+  }
+  #ul li{
+    text-align: center;
+    margin: 1rem auto;
+  }
+  #ul div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    place-content: center;
+    gap: 1rem;
+    text-align: center;
+    margin: 1rem auto;
+  }
+.register{
+  margin-left: 0rem;
+}    
+  #menu,#close{
+    display: block;
+  }
+  #close{
+    padding: 1rem;
+  }
+}
 @media screen and (max-width: 760px) {
+  .nav{
+    width:100%;
+  }
   .heroSection {
     flex-direction: column;
   }
   .heroText {
-    width: 100%;
+    width: 80%;
     text-align: center;
+  }.heroText h1{
+    font-size: 38px;
   }
   .heroImage {
     width: 100%;
@@ -451,7 +512,7 @@ footer {
     margin: 0rem;
   }
   .offerText{
-    width: 100%;
+    width: 80%;
     margin: 2rem;
   }
   .offerImage{
@@ -461,6 +522,22 @@ footer {
   .containerDiamond{
     flex-wrap: wrap;
     justify-content: center;
+    gap: 0rem;
+  }
+
+  footer{
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+  .links ul{
+    text-align: center;
+    flex-direction: row;
+  }
+  @media screen and (max-width: 600px){
+    .nav img {
+      width: 40%;
+    }
   }
  
 }
