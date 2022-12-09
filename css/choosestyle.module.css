@@ -275,17 +275,34 @@ hr {
 .finish {
   margin-right: 5rem;
 }
+.button:hover,.share:hover,.back-arrow:hover{
+  transform: scale(1.1);
+}
 .display{
-  display: none;
+  opacity: 0;
+  height: 45vh;
+  width: 50vw;
+  transition: all 1s ease-in;
+}
+.format{
+  visibility: hidden;
+  background-color:#d9d9d9;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border: 1px solid #bbb7b7;
+}
+.format>a{
+  color: #000000;
+  border-bottom: 1px solid #bbb7b7;
+  text-decoration: none;
+
 }
 .popup{
   background-color: #d9d9d9;
-  height: 50vh;
-  width: 45vw;
   position: absolute;
   top: 40%;
   text-align: center;
-
 }
 .popup>div{
   width: 100%;
