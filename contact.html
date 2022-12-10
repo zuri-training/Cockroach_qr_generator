@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="css/contact.module.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+
+<script src="contact.js"></script>
+</head>
+<body>
+    <nav class="nav-bar">
+        <div class="nav-left">
+        <img src="assets/logo.png" alt="" class="icon">
+
+            </div>
+
+            <div class="navbar-links">
+        <ul class="nav-menu">
+            
+            <li><a>Home</a></li>
+
+            <li><a>QR codes</a></li>
+            <li><a class="active-link">Contact Us</a></li>
+        </ul>
+
+        <div class="nav-right">
+            <span class="login-but"><a href="">Login </a> </span>
+
+            <div class="register-but"><a href="">Register</a></div>
+
+        </div>
+
+    </div>
+
+    </nav>
+
+    <div class="container">
+<form action="post">
+     <label for="">Name<span class="green-star">*</span> 
+    </label>
+    <br>
+            <input type="text" placeholder="John" required>
+<br>
+
+
+
+
+            <label for="">Email<span class="green-star">*</span>
+                <br></label>
+            <input type="email" placeholder="Johndoe@gmail.com" required>
+            <br>
+
+            <label for="">Subject<span class="green-star">*</span></label>
+
+            <br>
+            <input type="text" placeholder="How can our team help?" required>
+            <br>
+
+
+            <label for="">Anything else you'd like us to know?<span class="green-star">*</span> </label>
+
+            <br>
+
+            <textarea name="" id="" cols="30" rows="10" placeholder="Hi QR_gen, I would like to..." required></textarea>
+        <br>
+        
+        <button id="send-but" type="submit"> <img class="telegram-icon" src="assets/vector.png""> Send message</button>
+    </form>          
+
+    </div>
+    
+    
+</body>
+</html>
