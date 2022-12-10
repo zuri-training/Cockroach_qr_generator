@@ -27,10 +27,7 @@ body {
     top: 76px;
     border-radius: 8px;
     box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.1);
-
 }
-
-
 .title {
     font-family: 'Poppins';
     font-style: normal;
@@ -55,6 +52,7 @@ p {
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
+    margin-bottom: 10px;
 }
 
 form {
@@ -71,6 +69,7 @@ form {
 form label {
     font-size: 24px;
     color: var(--other-color);
+    top:10px
 }
 
 form input {
@@ -112,7 +111,6 @@ button {
     left: 97px;
     top: 684px;
     background-color: #5683F6;
-    ;
     border-radius: 10px;
     border: none;
     color: var(--white);
@@ -160,7 +158,7 @@ button {
 
 form .rem {
     padding-bottom: 28px;
-    display:flex;
+    display: flex;
 
 }
 
@@ -182,7 +180,7 @@ form .rem {
     text-decoration: none;
     color: #606060;
     opacity: 0.4;
-    align-items: right; 
+    align-items: right;
     padding-right: 67px;
     transform: translate(-50%, -50%) scale(1.25);
 }
@@ -193,14 +191,14 @@ form .rem {
     right: 2.45%;
     top: 3.16%;
     bottom: 94.32%;
-    height: 12px;
+    height: 20px;
     width: 12.33px;
-    border: 2px solid #606060;
     text-align: center;
     align-items: center;
     line-height: 15px;
     font-size: 24px;
     cursor: pointer;
+    font-weight: 700;
 
 }
 
@@ -221,11 +219,12 @@ form .rem {
         transform 200ms ease-out 0ms;
 }
 
-.popup.active {
+.popup.active,
+.container.active {
     top: 50%;
     opacity: 1;
     z-index: 1;
-    position: fixed;
+    position: absolute;
     transform: translate(-50%, -50%) scale(1);
     transition: top 0ms ease-out 200ms,
         opacity 200ms ease-out 0ms,
@@ -282,20 +281,6 @@ form .rem {
     top: 353px;
 }
 
-.user {
-    position: absolute;
-    width: 189px;
-    height: 24px;
-    left: 188px;
-    top: 422px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    color: #ABA5A5;
-
-}
 
 .user a {
     text-decoration: none;
@@ -305,29 +290,102 @@ form .rem {
     display: none;
 }
 
+form .bling input{    
+    width: 520px;
+    height: 56px; 
+}
+
+.container {
+    position: relative;
+    width: 613px;
+    height: 500px;
+    background: #FBFBFB;
+    box-shadow: 2px 5px 8px rgba(0, 0, 0, 0.18);
+    border-radius: 20px;
+    align-items: center;
+    opacity: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.25);
+    transition: top 0ms ease-out 200ms,
+        opacity 200ms ease-out 0ms,
+        transform 200ms ease-out 0ms;
+}
+.p-container {
+    position: absolute;
+    width: 613px;
+    height: 475px;
+    background: #FBFBFB;
+    box-shadow: 2px 5px 8px rgba(0, 0, 0, 0.18);
+    border-radius: 20px;
+    align-items: center;  
+    left: 270px;
+    top: 76px;
+}
+.container h1 {
+    position: absolute;
+    width: 272px;
+    height: 48px;
+    left: 171px;
+    top: 51px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    color: #101010;
+
+}
+
+.mailing svg {
+    position: absolute;
+    width: 104px;
+    height: 219px;
+    left: 255px;
+    top: 140px;
+
+}
+
+.mailing p {
+    position: absolute;
+    width: 455px;
+    height: 24px;
+    left: 79px;
+    top: 401px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: right;
+    color: rgba(0, 0, 0, 0.5);
+}
+
 @media screen and (max-width: 900px) {
-  
+
     .r-container {
         max-width: 500px;
         position: absolute;
         left: 95px;
-        top: 30px; 
+        top: 30px;
     }
 
     form .dtype input {
         max-width: 350px;
         padding-left: 0px;
     }
+
     .name {
         display: flex;
         flex-direction: column;
     }
+
     button {
         max-width: 400px;
-    }  
-    form .rem{
+    }
+
+    form .rem {
         display: block;
-    }  
+    }
 }
 
 @media screen and (max-width: 667px) {
@@ -335,14 +393,16 @@ form .rem {
         max-width: 100vw;
         position: absolute;
         left: 0px;
-        top: 0px; 
+        top: 0px;
     }
+
     .name {
         display: flex;
         flex-direction: column;
     }
+
     button {
         max-width: 250px;
-    }  
+    }
 
 }
