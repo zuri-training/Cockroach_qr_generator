@@ -22,14 +22,14 @@ class LoginController extends Controller
 
         // check users creds to to log in
         if (Auth::attempt($request->only('email', 'password'))) {
-            return 'user logged in';
-        } else return 'invalid creds';
+            return redirect()->route('home');
+        } else return back()->with('msg', 'Invalid creds');
     }
 
     function logout()
     {
         // log out authenticated user 
         Auth::logout();
-        return 'logged out';
+        return redirect()->route('login');
     }
 }
