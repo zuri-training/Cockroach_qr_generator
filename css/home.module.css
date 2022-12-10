@@ -29,7 +29,7 @@ ul {
 li {
   list-style-type: none;
 }
-.nav ul li a {
+.nav> ul> li> a {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 500;
@@ -38,6 +38,10 @@ li {
   color: #101010;
   cursor: pointer;
 }
+.nav>ul>li>a:hover{
+color: #5683f6;
+}
+
 .btn {
   border: none;
   background: none;
