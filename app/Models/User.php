@@ -23,6 +23,11 @@ class User extends Authenticatable
 
     protected $guarded = ['id'];
 
+    function password_reset()
+    {
+        return $this->hasOne(Password_Reset::class);
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *

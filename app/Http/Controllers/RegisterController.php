@@ -40,7 +40,7 @@ class RegisterController extends Controller
 
         // log in user  
         if (Auth::attempt($request->only('email', 'password'))) {
-            return 'user logged in';
+            return redirect()->route('home');
         }
     }
 }

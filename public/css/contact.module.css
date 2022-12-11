@@ -1,0 +1,234 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* .nav-bar{
+    display: flex;
+     flex-direction: row;
+    /* padding-top: 10px; */
+    box-shadow: 0 0 5px 0 #aaaa; 
+    height: 5%; 
+    align-items: center;
+} */
+
+
+.icon{
+    width: 100px;
+    height:20px;
+    margin-left: 20%;
+}
+
+/* .navbar-links{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+} */
+
+/* .nav-menu{
+    margin-inline-end: 100px;
+} */
+
+/* .navbar-links ul{
+display: flex;
+flex-direction: row;
+align-content: center;
+} */
+
+/* .nav-menu li{
+list-style:none;
+padding-inline-end: 30px; 
+padding: 1rem;
+font-weight: 500;
+font-size: smaller;
+cursor: pointer;
+} */
+
+/* .nav-menu li:hover{
+    background-color: rgba(238, 143, 143, 0.445);
+
+} */
+
+/* .active-link{
+    color: #44CF63;
+} */
+
+
+/* .nav-left{
+    margin-right: 30%;
+}
+.nav-right{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    font-weight: 600;    
+}
+ */
+/* .login-but{
+    display: inline-block;
+cursor: pointer;
+margin-right: 30px;
+padding: 1rem;
+}
+
+.login-but:hover{
+    background-color:rgba(238, 143, 143, 0.445);
+}
+
+.register-but{
+    display: inline-block;
+    background-color: #5683F6;
+    border-color: none;
+    width: 80px;
+padding: 5px;
+border-radius: 5px;
+
+}
+
+.register-but a{
+    color: white;
+    }
+    
+
+.register-but a:hover{
+    color: #5683F6;
+}
+.register-but:hover{
+background-color: white;
+
+}
+ */
+
+body{
+    height: 100vh;
+    font-family: "Poppins", sans-serif ;
+    
+}
+
+.container{
+    width: 60%;
+    margin: 5% auto ;
+    padding: 70px ;
+    box-shadow: 3px 3px 8px 3px #aaaa;
+}
+
+.green-star{
+    color: #44CF63;
+}
+
+input{
+    width: 100%;
+    height: 40px;
+    font-size: 15px;
+    margin: 20px 0;
+    padding-left: 5px;
+    font-weight: 500;
+
+}
+
+
+textarea{
+resize: none;
+width: 100%;
+height: 200px;
+font-size: 15px;
+padding-left: 5px;
+font-weight: 500;
+
+}
+
+button{
+    background-color: #5683F6;
+    color: white;
+    border-color: #5683F6;
+}
+
+
+
+#send-but{
+    width: 50%;
+    border-radius: 5px;padding: 5px;
+    display: block;
+    margin-left:auto ;
+    margin-right: auto;
+    font-weight: 600;
+    margin-top: 70px;
+    cursor: pointer;
+
+}
+
+.telegram-icon{
+    width:10px ;
+    height: 10px;
+
+}
+
+
+
+@media screen and (max-width: 800px){
+
+.nav-bar{
+    flex-direction: column;
+    height: 10%;
+
+}
+
+
+.navbar-links {
+    display: flex;
+    flex: row;
+}
+.nav-right{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+}
+
+.nav-menu{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+        margin-inline-end: 30px;
+    }
+    
+
+
+.navbar-links ul{
+    width: 100%;
+}
+
+.navbar-links li{
+    text-align: center;
+    padding-inline-end: 0;
+}
+
+.register-but{
+    width: 80px;
+    height: 30px;
+padding: 5px;
+margin-right: 30px;
+border-radius: 5px;
+
+}
+
+.login-but{
+    margin-right: 10px;
+
+}
+
+.nav-menu li{
+width: 100px;
+}
+
+.container{
+    width: 90%;
+}
+
+} 
+
+
+
