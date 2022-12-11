@@ -37,6 +37,8 @@ Route::group(['middleware' => 'guest'], function () {
 Route::group(['middleware' => 'auth'], function () {
     // home for authenticaed users
     Route::get('/home', [QRCodeController::class, 'index'])->name('home');
+    Route::get('/generate-qr', [QRCodeController::class, 'generate'])->name('generate');
+
 
     Route::get('/qrcode', [QRCodeController::class, 'qrcode'])->name('qrcode');
     Route::post('/generate-qr-url', [QRCodeController::class, 'url'])->name('url');

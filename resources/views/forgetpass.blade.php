@@ -1,14 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layout.layout')
+@section('title', 'Forget Password | QR Generator')
+@section('content')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Forget Password | QR_Gen</title>
-</head>
+    <link rel="stylesheet" href="{{ asset('css/home.module.css') }}">
 
-<body>
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/login&register.module.css') }}">
+    <!------------------forgot password popup------------------>
+    <section id="popup" class="popup">
+        <div class="close-btn">&times;</div>
+        <form action="{{ route('link_to_mail') }}" method="POST">
+            @csrf
+            <div class="title">
+                <h1>Forgot Password?</h1>
+                <p>Please enter your registered email below to receive password reset
+                    instruction</p>
+            </div>
+            <div class="pop-form">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" value="" placeholder="Johndoe@gmail.com" required>
+            </div>
+            <div class="reset" id="popup">
+                <button type="submit" id="reset" style="color: #FBFBFB;">Reset Password</button>
+            </div>
+            <div class="users">Remember
+                password?<a href="{{ route('login') }}">log in</a>
+            </div>
+            @if (session()->has('msg'))
+                <div>user with this email doesn't exist</div>
+            @endif
+            @if (session()->has('msg2'))
+                <div>{{ session()->get('msg2') }}</div>
+            @endif
+        </form>
+        </div>
+    </section>
+
+    <!-------------custom js link-------------------->
+    <script type="text/javascript" src="js/forgotpassword.js"></script>
     <h4>Forget Password</h4>
 
     <form action="{{ route('link_to_mail') }}" method="post">
@@ -18,12 +46,5 @@
     </form>
     <a href="{{ route('login') }}">Login</a>
 
-    @if (session()->has('msg'))
-        <p>user with this email doesn't exist</p>
-    @endif
-    @if (session()->has('msg2'))
-        <p>{{ session()->get('msg2') }}</p>
-    @endif
-</body>
 
-</html>
+@endsection

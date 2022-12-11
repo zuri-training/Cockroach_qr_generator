@@ -10,7 +10,14 @@ class QRCodeController extends Controller
 {
     function index()
     {
-        return view('home');
+        $files = File::where('user_id', auth()->id())->get();
+        $links = Url::where('user_id', auth()->id())->get();
+        return view('home', ['files' => $files, 'links' => $links]);
+    }
+
+    function generate()
+    {
+        return view('generateqr');
     }
 
     function qrcode()
@@ -33,7 +40,6 @@ class QRCodeController extends Controller
             'url_link' => $request->url,
             'user_id' => auth()->id(),
         ]);
-
         return redirect()->route('qrcode')->with('url_link', $request->url);
     }
 
