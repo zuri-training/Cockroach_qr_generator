@@ -1,105 +1,217 @@
-@extends('layout.layout')
-@section('title', 'Home | QR Generator')
-@section('content')
-    <link rel="stylesheet" href="{{ asset('css/choosestyle.module.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/home.module.css') }}">
+<!DOCTYPE html>
+<html lang="en">
 
-    <main>
-        <section class="section1">
-            <h1 class="stages">
-                <span class="first-stage colored">1</span><span class="second-stage colored">Upload</span>
-            </h1>
-            <img src="assets/Arrow1.png" alt="arrow-1" class="arrow-1" />
-            <h1 class="stages">
-                <span class="first-stage border">2</span><span class="second-stage">Download</span>
-            </h1>
-        </section>
-        <div class="main-section">
-            <section class="section2">
-                <div class="qr-type">
-                    <span class="line"></span>
-                    <h2 class="heading2">Static QR Code</h2>
-                    <span class="line"></span>
-                </div>
-                <div class="uploads">
-                    <div class="container">
-                        <img src="assets/pdf-icon.png" alt="pdf-icon" class="img-container" />
-                        <div>
-                            <h3>PDF</h3>
-                            <p>Share PDF Document</p>
-                        </div>
-                    </div>
-                    <div class="container">
-                        <img src="assets/url-icon.png" alt="url-icon" class="img-container" />
-                        <div>
-                            <h3>Website URL</h3>
-                            <p>Link to a Website URL</p>
-                        </div>
-                    </div>
-                </div>
-                <form action="{{ route('url') }}" method="post" class="upload-form">
-                    @csrf
-                    <label for="url" class="url-label">Submit URL for your QR Code
-                        <div class="url-generate">
-                            <input name="url" id="url" type="url" placeholder="https://www.example.com"
-                                class="input_" required />
-                            <button type="submit" class="button generate">Generate</button>
-                        </div>
-                    </label>
-                </form>
-                <br />
-                <form action="{{ route('pdf') }}" method="post" class="form2" enctype="multipart/form-data">
-                    @csrf
-                    <div class="flex">
-                        <label for="pdf" class="pdf-label">Submit PDF
-                            <div class="generate-div">
-                                <p>Browse files or drag file here</p>
-                            </div>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="assets/qr_icons/logo33.png" rel="icon">
+    <title>QR_Code - Dashboard</title>
+    <link href="js/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="js/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/dashboardmn.module.css" rel="stylesheet">
+</head>
 
-                            <input type="file" id="pdf" name="pdf" accept="application/pdf" required />
-                        </label>
-                        <button class="button pdf" type="submit">Generate</button>
-                    </div>
-                </form>
-            </section>
-            <section class="section3">
-                <h2>QR Code</h2>
-                <hr />
-                <img src="assets/qr-codestyle.png" alt="qr-code" />
-            </section>
-        </div>
-        <section class="back">
-            <a href="dashboard_1.html">
-                <img src="assets/arrow2.png" alt="arrow" class="back-arrow" />
+<body id="page-top">
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
+                <div class="sidebar-brand-icon">
+                    <img src="assets/qr_icons/logo3.png">
+                </div>
+                <div class="sidebar-brand-text mx-3"></div>
             </a>
-            <h4 class="colored back-word">Back</h4>
-        </section>
-    </main>
-    {{-- <form action="{{ route('logout') }}" method="post">
-        @csrf
-        <input type="submit" value="Logout">
-    </form>
-    <h4>Generate QRCode</h4>
+            <hr class="sidebar-divider my-0">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span></a>
+            </li>
+            <hr class="sidebar-divider">
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="{{ route('generate') }}" data-toggle=""
+                    data-target="#collapseBootstrap" aria-expanded="true" aria-controls="collapseBootstrap">
+                    <i class="fas fa-fw fa-plus"></i>
+                    <span> Create QR code</span>
+                </a>
+            </li>
 
-    <h5>url</h5>
-    <form action="{{ route('url') }}" method="post">
-        @csrf
-        <input type="text" name="url" required>
-        <input type="submit" value="Generate">
+            <hr class="sidebar-divider">
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="" data-target="" aria-expanded="true"
+                    aria-controls="collapsePage">
+                    <i class="fas fa-fw fa-check"></i>
+                    <span>All QR code</span>
+                </a>
+                <div id="collapsePage" class="collapse" aria-labelledby="headingPage" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="#">View all</a>
+                    </div>
+                </div>
+            </li>
 
-    </form>
+            <hr class="sidebar-divider">
+            <li class="nav-item">
+                <form action="{{ route('logout') }}" method="POST">
+                    @csrf
+                    <button class="btn register">Logout</button>
+                </form>
+                {{-- <a class="nav-link collapsed" href="#" data-toggle="" data-target="" aria-expanded="true"
+                    aria-controls="collapsePage">
+                    <img src="https://img.icons8.com/metro/52/FFFFFF/exit.png" height="55" width="70" />
 
-    <h5>pdf</h5>
-    <form action="{{ route('pdf') }}" method="post" enctype="multipart/form-data">
-        @csrf
-        <input type="file" name="pdf">
-        <input type="submit" value="Generate">
+                </a> --}}
+                <div id="collapsePage" class="collapse" aria-labelledby="headingPage" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="#"></a>
+                    </div>
+                </div>
 
-    </form> --}}
+                <hr class="sidebar-divider">
+        </ul>
+        <!-- Sidebar -->
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <!-- TopBar -->
+                <nav class="navbar navbar-expand navbar-light bg-navbar topbar mb-4 static-top">
+                    <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <ul class="navbar-nav ml-auto">
 
-    {{-- 
-    @foreach ($errors->all() as $error)
-        <p style="color:red;">{{ $error }}</p>
-    @endforeach --}}
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                aria-labelledby="searchDropdown">
+                                <form class="navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-1 small"
+                                            placeholder="What do you want to look for?" aria-label="Search"
+                                            aria-describedby="basic-addon2" style="border-color: #5683F6;">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- Topbar -->
 
-@endsection
+                <!-- Container Fluid-->
+                <div class="container-fluid" id="container-wrapper">
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+                        </ol>
+                    </div>
+
+                    <!-- Area QR code -->
+                    @if ($files->count() <= 0 && $links->count() <= 0)
+                        <div class="row mb-3">
+                            <div class="col-xl-6 col-lg-7">
+                                <div class="card mb-4">
+                                    <div
+                                        class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                        <p>Saved QR codes will appear here</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @else
+                        <h4>PDFs</h4><br>
+                        <div class="row mb-3">
+                            @foreach ($files as $file)
+                                <div class="col-xl-4 col-lg-5 mb-4">
+                                    <div class="card">
+                                        <div
+                                            class="card-header py-2 d-flex flex-row align-items-center justify-content-between">
+                                            {{-- <img src="assets/qr_icons/qr-code-sample.png"> --}}
+                                            {{-- {!! QrCode::format('png')->size(300)->generate(asset('uploads/pdf') . '/' . $file->filename) !!} --}}
+                                            {!! QrCode::size(150)->generate(asset('uploads/pdf') . '/' . $file->filename) !!}
+
+                                            <br><br>
+                                            <div>
+                                                <h6>Untitled</h6>
+                                                <i class="fas fa-solid fa-file-pdf" style="color:#5683F6;"></i>
+                                                <span>PDF</span><br>
+                                                <i class="fas fa-thin fa-clock"></i>
+                                                <span>{{ $file->created_at->format('d-m-y') }}</span><br><br>
+                                                <a class="dropdown-toggle btn btn-primary btn-sm" href="#"
+                                                    role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false"
+                                                    style="background-color:#5683F6;">
+                                                    Download
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                                                    aria-labelledby="dropdownMenuLink">
+                                                    <a class="dropdown-item" href="assets/qr_icons/qr-code-sample.pdf"
+                                                        download="qr_code34554">PDF</a>
+                                                    <a class="dropdown-item" href="assets/qr_icons/qr-code-sample.png"
+                                                        download="qr_code34554">png</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                        <h4>Links</h4><br>
+
+                        <div class="row mb-3">
+                            @foreach ($links as $link)
+                                <div class="col-xl-4 col-lg-5 mb-4">
+                                    <div class="card">
+                                        <div
+                                            class="card-header py-2 d-flex flex-row align-items-center justify-content-between">
+                                            {{-- <img src="assets/qr_icons/qr-code-sample.png"> --}}
+                                            {{-- {!! QrCode::format('png')->size(300)->generate(asset('uploads/pdf') . '/' . $file->filename) !!} --}}
+                                            {!! QrCode::size(150)->generate($link->url_link) !!}
+
+                                            <br><br>
+                                            <div>
+                                                <h6>Untitled</h6>
+                                                {{-- <img src="assets/url-icon.png" alt="url-icon" class="img-container"> --}}
+                                                <span>Link</span><br>
+                                                <i class="fas fa-thin fa-clock"></i>
+                                                <span>{{ $link->created_at->format('d-m-y') }}</span><br><br>
+                                                <a class="dropdown-toggle btn btn-primary btn-sm" href="#"
+                                                    role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false"
+                                                    style="background-color:#5683F6;">
+                                                    Download
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                                                    aria-labelledby="dropdownMenuLink">
+                                                    <a class="dropdown-item" href="assets/qr_icons/qr-code-sample.pdf"
+                                                        download="qr_code34554">PDF</a>
+                                                    <a class="dropdown-item" href="assets/qr_icons/qr-code-sample.png"
+                                                        download="qr_code34554">png</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                    @endif
+
+                    <script src="js/vendor/jquery/jquery.min.js"></script>
+                    <script src="js/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+                    <script src="js/vendor/jquery-easing/jquery.easing.min.js"></script>
+                    <script src="js/effects-admin.min.js"></script>
+
+</body>
+
+</html>

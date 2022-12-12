@@ -13,13 +13,13 @@
         <nav class="nav">
             <img src="./assets/logo.png" alt='logo' />
             <ul id="ul">
-                <li> <a href="login.html"> QR code</a></li>
-                <li><a href="#">Home</a></li>
+                {{-- <li> <a href="{{ route('home') }}"> QR code</a></li> --}}
+                <li><a href="{{ route('home') }}">Home</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
                 <div>
                     @guest
-                        <button class="btn"><a class="btn login" href="login.html">Login</a></button>
-                        <button class="btn"><a class="btn register" href="register.html">Register</a></button>
+                        <button class="btn"><a class="btn login" href="{{ route('login') }}">Login</a></button>
+                        <button class="btn"><a class="btn register" href="{{ route('register') }}">Register</a></button>
                     @endguest
                     @auth
                         <form action="{{ route('logout') }}" method="POST">
@@ -47,9 +47,9 @@
         <div class="links">
             <h4>Links</h4>
             <ul>
-                <li><a href="login.html">QR code</a></li>
+                <li><a href="{{ route('login') }}">QR code</a></li>
                 <li><a href="#">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </div>
     </footer>

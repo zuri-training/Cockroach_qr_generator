@@ -25,9 +25,9 @@
             {{-- <img src="assets/download-qr.jpg" alt="downloaded-qr-code" /> --}}
             <div class="qrcode" style="padding-top:10px;">
                 @if (session()->has('url_link'))
-                    {!! QrCode::format('png')->size(300)->generate(session()->get('url_link')) !!}
+                    {!! QrCode::size(300)->generate(session()->get('url_link')) !!}
                 @elseif (session()->get('filename'))
-                    {!! QrCode::format('png')->size(300)->generate(asset('uploads/pdf') . '/' . session()->get('filename')) !!}
+                    {!! QrCode::size(300)->generate(asset('uploads/pdf') . '/' . session()->get('filename')) !!}
                 @endif
 
             </div>
@@ -58,7 +58,7 @@
         </section>
         <section class="back-prev">
             <div class="back">
-                <a href="choosestyle.html">
+                <a href="{{ route('generate') }}">
                     <img src="assets/arrow2.png" alt="arrow" class="back-arrow" />
                 </a>
                 <h4 class="colored back-word">Back</h4>

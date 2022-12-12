@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class RegisterController extends Controller
 {
@@ -27,9 +28,8 @@ class RegisterController extends Controller
 
         // check if email exists in the db 
         if ($email_exist) {
-            return back()->with('msg', 'email exists');
+            return back()->with('msg', 'This email exists in our system');
         }
-
         // create new user
         User::create([
             'fname' => $request->fname,
