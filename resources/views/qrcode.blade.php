@@ -23,7 +23,7 @@
             <h2>Congratulations!</h2>
             <h3>Your QR Code is ready.</h3>
             {{-- <img src="assets/download-qr.jpg" alt="downloaded-qr-code" /> --}}
-            <div class="qrcode" style="padding-top:10px;">
+            <div class="qrcode" id='qrcode' style="padding-top:10px;">
                 @if (session()->has('url_link'))
                     {!! QrCode::size(300)->generate(session()->get('url_link')) !!}
                 @elseif (session()->get('filename'))
