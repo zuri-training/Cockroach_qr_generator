@@ -133,14 +133,14 @@ composer install
 
 Create .env file and make the required configuration changes in it, run the database migrations (**Set the database connection and the mail configuration in .env before migrating**)
 
+```bash
+php artisan migrate
+```
+
 Generate an an app key for your .env file using
 
 ```bash
 php artisan key:generate
-```
-
-```bash
-php artisan migrate
 ```
 
 Then launch the server:
