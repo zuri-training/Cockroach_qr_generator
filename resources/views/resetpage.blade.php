@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 
-    <main class="p-container">
+    <main class="main">
 
         <div class="popup">
             <form action="{{ route('password-reset', $token) }}" method="post">
