@@ -49,8 +49,6 @@
             </form>
         </div>
     </main>
-    <!-------------custom js link-------------------->
-    <script type="text/javascript" src="js/forgotpassword.js"></script>
     {{-- <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">

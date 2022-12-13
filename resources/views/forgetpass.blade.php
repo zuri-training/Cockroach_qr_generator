@@ -35,8 +35,6 @@
         </form>
 </main>
 
-    <!-------------custom js link-------------------->
-    <script type="text/javascript" src="js/forgotpassword.js"></script>
     <!-- <h4>Forget Password</h4>
 
     <form action="{{ route('link_to_mail') }}" method="post">

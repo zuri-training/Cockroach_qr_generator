@@ -41,8 +41,6 @@
 
         </form>        
     </div>
-    <!-------------custom js link-------------------->
-    <script type="text/javascript" src="js/forgotpassword.js"></script>
 </main>
 
         {{-- 
