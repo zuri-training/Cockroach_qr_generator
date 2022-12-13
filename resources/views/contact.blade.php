@@ -11,6 +11,7 @@
 
     <main class="container">
         <form action="{{ route('contact-us') }}" method="post">
+            @csrf
             <label for="">Name<span class="green-star">*</span>
             </label>
             <br>
@@ -38,6 +39,9 @@
             <button id="send-but" type="submit"> <img class="telegram-icon" src="assets/vector.png"> Send
                 message</button>
         </form>
+        @if (session()->has('msg'))
+            <div style="color: green">{{ session()->get('msg') }}</div>
+        @endif
     </main>
 
 @endsection
