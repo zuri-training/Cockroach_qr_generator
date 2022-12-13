@@ -19,7 +19,7 @@
                     <i class="fa-solid fa-x" id="close"></i>
                 </div>
                 <li><a href="{{ route('home') }}">Home</a></li>
-                <li><a href="">Contact Us</a></li>
+                <li><a href="{{ route('contat') }}">Contact Us</a></li>
                 <div class="log-reg">
                     @guest
                         <button class="btn"><a class="btn login" href="{{ route('login') }}">Login</a></button>
@@ -51,8 +51,8 @@
             <h4>Links</h4>
             <ul>
                 <li><a href="{{ route('login') }}">QR code</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="{{ route('contact') }}">Contact</a></li>
             </ul>
         </div>
     </footer>
