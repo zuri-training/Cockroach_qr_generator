@@ -12,7 +12,7 @@
     <header class="header">
         <nav class="nav">
             <img src="./assets/logo.png" alt='logo' />
-            <ul id="ul">
+            <ul id="ul" class="normal-nav">
                 {{-- <li> <a href="{{ route('home') }}"> QR code</a></li> --}}
                 <li><a href="{{ route('home') }}">Home</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
