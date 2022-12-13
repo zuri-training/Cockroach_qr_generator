@@ -12,7 +12,7 @@
 <body>
     <header class="header">
         <nav class="nav">
-            <img src="./assets/logo.png" alt='logo' />
+            <img src="{{ asset('assets/logo.png') }}" alt='logo' />
             <ul id="ul" class="normal-nav">
                 {{-- <li> <a href="{{ route('home') }}"> QR code</a></li> --}}
                 <div class="close-div">
@@ -44,7 +44,7 @@
 
     <footer>
         <div class="qrgen">
-            <img src="./assets/logo.png" alt='logo' />
+            <img src="{{ asset('assets/logo.png') }}" alt='logo' />
             <p>Generate QR codes for your files, Download,<br> and share your QR codes.</p>
         </div>
         <div class="links">
