@@ -37,7 +37,7 @@
                 <ul>
                     {{-- validation error  --}}
                     @foreach ($errors->all() as $error)
-                        <li style="font-size:12px;">{{ $error }}</li>
+                        <li style="color:red">{{ $error }}</li>
                     @endforeach
                 </ul>
             </div>
