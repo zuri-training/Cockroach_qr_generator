@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PasswordResetController;
 use App\Http\Controllers\QRCodeController;
@@ -51,20 +52,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 });
 
-Route::get('/contact', function () {
-    return view('contact');
-})->name('contact');
-
-Route::post('/contact-us', function (Request $request) {
-    $message = $request->validate([
-        'name' => 'string|required',
-        'email' => 'email|required',
-        'subject' => 'string|required',
-        'message' => 'string|required',
-    ]);
-    dd($message['name']);
-    Mail::to($request->email)->send(new Contact($message));
-})->name('contact-us');
+// contact us 
+Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+Route::post('/contact-us', [ContactController::class, 'contact'])->name('contact-us');
 
 
 /// password reset

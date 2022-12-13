@@ -32,7 +32,7 @@ class Contact extends Mailable
     {
         return new Envelope(
             from: 'cockroachqrgen@gmail.com',
-            replyTo: 'cockroachqrgen@gmail.com',
+            replyTo: $this->mesage['email'],
             subject: $this->message['subject'],
         );
     }
