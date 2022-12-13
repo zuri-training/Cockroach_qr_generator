@@ -2,7 +2,6 @@
 
 namespace App\Mail;
 
-use Faker\Provider\ar_EG\Address;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
@@ -10,18 +9,18 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class PasswordReset extends Mailable
+class Contact extends Mailable
 {
     use Queueable, SerializesModels;
-    public $user;
+
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($user)
+    public function __construct($message)
     {
-        $this->user = $user;
+        $this->message = $message;
     }
 
     /**
@@ -34,7 +33,7 @@ class PasswordReset extends Mailable
         return new Envelope(
             from: 'cockroachqrgen@gmail.com',
             replyTo: 'cockroachqrgen@gmail.com',
-            subject: 'Password Reset',
+            subject: $this->message['subject'],
         );
     }
 
@@ -46,10 +45,10 @@ class PasswordReset extends Mailable
     public function content()
     {
         return new Content(
-            view: 'email.passwordreset',
+            view: 'email.contact',
             with: [
-                'user' => $this->user,
-            ],
+                'message' => $this->message
+            ]
         );
     }
 
