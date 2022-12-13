@@ -15,9 +15,12 @@
             <img src="./assets/logo.png" alt='logo' />
             <ul id="ul" class="normal-nav">
                 {{-- <li> <a href="{{ route('home') }}"> QR code</a></li> --}}
+                <div class="close-div">
+                <i class="fa-solid fa-x" id="close"></i>
+                </div>
                 <li><a href="{{ route('home') }}">Home</a></li>
                 <li><a href="">Contact Us</a></li>
-                <div>
+                <div class="log-reg">
                     @guest
                         <button class="btn"><a class="btn login" href="{{ route('login') }}">Login</a></button>
                         <button class="btn"><a class="btn register" href="{{ route('register') }}">Register</a></button>
@@ -30,11 +33,10 @@
                     @endauth
 
 
-                    <button id="close">X</button>
 
                 </div>
             </ul>
-            <button id="menu">Menu</button>
+            <i class="fa-sharp fa-solid fa-bars" id="menu"></i>
         </nav>
     </header>
 
@@ -54,6 +56,7 @@
             </ul>
         </div>
     </footer>
+    <script src="https://kit.fontawesome.com/fd0f757bae.js" crossorigin="anonymous"></script>
     <script src="{{ asset('js/index.js') }}"></script>
 </body>
 
