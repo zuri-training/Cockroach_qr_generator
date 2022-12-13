@@ -117,3 +117,12 @@ color: #ffffff;
 color: #5683F6;
 opacity: .8;
 }
+@media screen and (max-width:770px){
+    .name{
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .name>div{
+        width:100% ;
+    }
+}

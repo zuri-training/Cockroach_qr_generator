@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('title')</title>
+    <link rel="stylesheet" href="{{ asset('css/home.module.css') }}">
 </head>
 
 <body>
@@ -15,7 +16,7 @@
             <ul id="ul" class="normal-nav">
                 {{-- <li> <a href="{{ route('home') }}"> QR code</a></li> --}}
                 <li><a href="{{ route('home') }}">Home</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="">Contact Us</a></li>
                 <div>
                     @guest
                         <button class="btn"><a class="btn login" href="{{ route('login') }}">Login</a></button>
@@ -48,12 +49,12 @@
             <h4>Links</h4>
             <ul>
                 <li><a href="{{ route('login') }}">QR code</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
             </ul>
         </div>
     </footer>
-
+    <script src="{{ asset('js/index.js') }}"></script>
 </body>
 
 </html>

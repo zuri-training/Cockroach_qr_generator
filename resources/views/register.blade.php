@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/login&register.module.css') }}">
     <main class="main">
         <div class="popup">
-
+            
         <div class="logo">
             <h1>Create an account</h1>
             <p>By signing up, I agree to QR_gen's <span>Terms</span> and <span>privacy policy.</span></p>
