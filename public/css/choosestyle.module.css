@@ -275,6 +275,9 @@ hr {
 .finish {
   margin-right: 5rem;
 }
+.finish>a{
+  margin-left: 2.5rem;
+}
 .button:hover,.share:hover,.back-arrow:hover{
   transform: scale(1.1);
 }
@@ -304,9 +307,11 @@ hr {
   top: 40%;
   text-align: center;
 }
-.popup>div{
+.close-bar{
   width: 100%;
-  text-align: end;
+  border: none;
+  text-align: right;
+  background-color: #d9d9d9;
 }
 .fa-x{
   margin-top: 2rem;

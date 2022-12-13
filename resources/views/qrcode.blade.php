@@ -42,9 +42,9 @@
                 </div>
                 <button class="share" onclick="share()">Share</button>
                 <div class="popup display">
-                    <div>
-                        <i class="fa-solid fa-x fa-2x"></i>
-                    </div>
+                        <button onclick="close()" class="close-bar">
+                            <i class="fa-solid fa-x fa-2x"></i>
+                        </button>
                     <h4>Share this QR Code via</h4>
                     <ul class="icons">
                         <i class="fa-brands fa-facebook fa-2x"><a href="#"></a></i>

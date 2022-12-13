@@ -20,7 +20,7 @@
         <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
                 <div class="sidebar-brand-icon">
-                    <img src="assets/qr_icons/logo3.png">
+                    <img src="assets/qr_icons/logo33.png">
                 </div>
                 <div class="sidebar-brand-text mx-3"></div>
             </a>
@@ -77,8 +77,8 @@
             <div id="content">
                 <!-- TopBar -->
                 <nav class="navbar navbar-expand navbar-light bg-navbar topbar mb-4 static-top">
-                    <button id="sidebarToggleTop" class="btn -circle mr-3">
-                        <i class="fa fa-bars"></i>
+                    <button id="sidebarToggleTop" class="btn  btn-link rounded-circle mr-3">
+                        <i class="fa fa-bars" style="color:#5683F6;"></i>
                     </button>
                     <ul class="navbar-nav ml-auto">
 
