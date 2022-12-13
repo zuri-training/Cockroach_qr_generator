@@ -1,5 +1,5 @@
 @extends('layout.layout')
-@section('title', 'GEnerate | QR Generator')
+@section('title', 'Generate | QR Generator')
 @section('content')
     <link rel="stylesheet" href="{{ asset('css/choosestyle.module.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/home.module.css') }}">
@@ -69,7 +69,7 @@
             </section>
         </div>
         <section class="back">
-            <a href="dashboard_1.html">
+            <a href="{{ route('home') }}">
                 <img src="assets/arrow2.png" alt="arrow" class="back-arrow" />
             </a>
             <h4 class="colored back-word">Back</h4>
