@@ -1,0 +1,21 @@
+  .dropdown-share {
+  display: inline-block;
+}
+
+.dropdown-share .btn {
+  background-color: #fff;
+  color: #5683F6;
+  border: 1px solid #5683F6;
+  vertical-align: baseline;
+}
+
+.dropdown-share .dropdown-menu {
+  background-color: #fff;
+  color: #5683F6;
+  border: 1px solid #ccc;
+}
+
+.dropdown-share .dropdown-menu a {
+  color: #5683F6;
+  text-decoration: none;
+}

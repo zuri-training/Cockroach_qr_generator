@@ -12,6 +12,7 @@
   <link href="js/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="js/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="css/dashboardmn.module.css" rel="stylesheet">
+  <link href="css/btnstyles.module.css" rel="stylesheet">
 </head>
 
 <body id="page-top">
@@ -20,7 +21,7 @@
     <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
         <div class="sidebar-brand-icon">
-          <img src="assets/qr_icons/logo3.png">
+          <img src="assets/qr_icons/logo33.png">
         </div>
         <div class="sidebar-brand-text mx-3"></div>
       </a>
@@ -73,7 +74,7 @@
         <!-- TopBar -->
         <nav class="navbar navbar-expand navbar-light bg-navbar topbar mb-4 static-top">
           <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
-            <i class="fa fa-bars"></i>
+            <i class="fas fa-bars" style="color: #5683F6;"></i>
           </button>
           <ul class="navbar-nav ml-auto">
                                               
@@ -112,43 +113,58 @@
           </div>
                                     
             <!-- QR code Sample -->
-            <div class="col-xl-4 col-lg-5 mb-4">
+            <div class="col-xl-6 col-lg-5 mb-4">
               <div class="card">
                 <div class="card-header py-2 d-flex flex-row align-items-center justify-content-between">               
+                  <a class="dropdown-toggle btn btn-primary btn-sm" href="#" role="button" id="dropdownMenuLink"
+                              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color:#5683F6;" > Download                           
+                          </a>                                                                
+                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                          aria-labelledby="dropdownMenuLink">                          
+                          <a class="dropdown-item" href="assets/qr_icons/qr-code-sample.pdf" download="qr_code34554">PDF</a>
+                          <a class="dropdown-item" href="assets/qr_icons/qr-code-sample.png" download="qr_code34554">png</a>                 
+                        </div> 
                   <img src="assets/qr_icons/qr-code-sample.png"><br><br>
+                  
                   <div>
                     <h6>Untitled</h6>                  
                     <i class="fas fa-solid fa-file-pdf" style="color:#5683F6;"></i>  
                       <span>PDF</span><br>
                       <i class="fas fa-thin fa-clock"></i>
                         <span>11 Dec 2022</span><br><br>                        
-                          <a class="dropdown-toggle btn btn-primary btn-sm" href="#" role="button" id="dropdownMenuLink"
-                              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color:#5683F6;" > Download                           
-                          </a>                                             
-                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                          aria-labelledby="dropdownMenuLink">                          
-                          <a class="dropdown-item" href="assets/qr_icons/qr-code-sample.pdf" download="qr_code34554">PDF</a>
-                          <a class="dropdown-item" href="assets/qr_icons/qr-code-sample.png" download="qr_code34554">png</a>                 
-                        </div>         
+                        <div class="dropdown-share">
+                          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownShareButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Share
+                          </button>
+                          <div class="dropdown-menu" aria-labelledby="dropdownShareButton">
+                            <a class="dropdown-item" href="https://www.facebook.com/sharer/sharer.php?u=https://example.com">Facebook</a>
+                            <a class="dropdown-item" href="https://twitter.com/intent/tweet?url=https://example.com&text=Check out this great website!">Twitter</a>
+                            <a class="dropdown-item" href="https://www.linkedin.com/shareArticle?mini=true&url=https://example.com">LinkedIn</a>
+                            <a class="dropdown-item" href="https://api.whatsapp.com/send?text=https://example.com">Whatsapp</a>
+                          </div>
+                        </div> 
+                        
+          
+                                                     
                   </div>                                         
                     
                   </div>
                 </div>
              </div>
+             
           </div> 
-      </div>
-
+      </div>      
     </div>
   <!---Container Fluid-->
   </div>
-                    
-  <!-- Footer -->
       
   <script src="js/vendor/jquery/jquery.min.js"></script>
   <script src="js/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="js/vendor/jquery-easing/jquery.easing.min.js"></script>
   <script src="js/effects-admin.min.js"></script>
-  
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6397dd24b9149533"></script>
+
+  <!-- Footer -->
 </body>
 
 </html>
