@@ -33,20 +33,17 @@
                     <button type="submit" class="login-btn">Reset Password</button>
                 </div>
             </form>
+            <div class="message">
+                <ul>
+                    {{-- validation error  --}}
+                    @foreach ($errors->all() as $error)
+                        <li style="font-size:12px;">{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
         </div>
     </main>
-    <div class="message">
-        <ul>
-            {{-- validation error  --}}
-            @foreach ($errors->all() as $error)
-                <li style="font-size:12px;">{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-    {{-- validation error  --}}
-    @foreach ($errors->all() as $error)
-        <div style="color: red">{{ $error }}</div>
-    @endforeach
+
 
     <script type="text/javascript" src="{{ asset('js/forgotpassword.js') }}"></script>
 @endsection
