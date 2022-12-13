@@ -23,7 +23,7 @@
             <h2>Congratulations!</h2>
             <h3>Your QR Code is ready.</h3>
             {{-- <img src="assets/download-qr.jpg" alt="downloaded-qr-code" /> --}}
-            <div class="qrcode" id='qrcode' style="padding-top:10px;">
+            <div class="qrcode" style="padding-top:10px;">
                 @if (session()->has('url_link'))
                     {!! QrCode::size(300)->generate(session()->get('url_link')) !!}
                 @elseif (session()->get('filename'))
@@ -63,7 +63,10 @@
                 </a>
                 <h4 class="colored back-word">Back</h4>
             </div>
-            <button class="button finish">Finish</button>
+            <button class="button finish">
+                <a href="{{ route('home') }}" class="button finish">
+                    Finish
+                </a></button>
         </section>
     </main>
     <script src="{{ asset('js/choosestyle.js') }}"></script>

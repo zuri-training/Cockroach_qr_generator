@@ -483,6 +483,9 @@ footer {
   #close{
     padding: 1rem;
   }
+  .qrgen img{
+    width: 50%;
+  }
 }
 @media screen and (max-width: 760px) {
   .nav{
