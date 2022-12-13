@@ -39,6 +39,10 @@
                 <div class="signup-link">
                     <span class="users">Don't have an account yet? <a href="{{ route('register') }}">Sign up</a></span>
                 </div>
+                {{-- validation error  --}}
+                @foreach ($errors->all() as $error)
+                    <div style="color: red">{{ $error }}</div>
+                @endforeach
                 @if (session()->has('msg'))
                     <div style="color: red;">{{ session()->get('msg') }}</div>
                 @endif

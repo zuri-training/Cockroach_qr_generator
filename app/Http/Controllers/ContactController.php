@@ -17,13 +17,15 @@ class ContactController extends Controller
 
     function contact(Request $request)
     {
-        $message = $request->validate([
+        $info = $request->validate([
             'name' => 'string|required',
             'email' => 'email|required',
             'subject' => 'string|required',
             'message' => 'string|required',
         ]);
-        Mail::to($request->email)->send(new Contact($message));
+
+        // return (new Contact($info))->render();
+        Mail::to('aishat.omojole@gmail.com')->send(new Contact($info));
         return back()->with('msg', 'Sent Successfully');
     }
 }

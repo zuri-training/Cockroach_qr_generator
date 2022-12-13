@@ -12,15 +12,16 @@ use Illuminate\Queue\SerializesModels;
 class Contact extends Mailable
 {
     use Queueable, SerializesModels;
-
+    public $message;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($message)
+    public function __construct($info)
     {
-        $this->message = $message;
+        $this->info = $info;
+        // dd($this->message['name']);
     }
 
     /**
@@ -32,8 +33,8 @@ class Contact extends Mailable
     {
         return new Envelope(
             from: 'cockroachqrgen@gmail.com',
-            replyTo: $this->mesage['email'],
-            subject: $this->message['subject'],
+            replyTo: $this->info['email'],
+            subject: $this->info['subject'],
         );
     }
 
@@ -47,7 +48,7 @@ class Contact extends Mailable
         return new Content(
             view: 'email.contact',
             with: [
-                'message' => $this->message
+                'info' => $this->info
             ]
         );
     }

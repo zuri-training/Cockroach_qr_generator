@@ -32,13 +32,17 @@
             <label for="">Anything else you'd like us to know?<span class="green-star">*</span> </label>
             <br>
 
-            <textarea name="" id="" cols="30" rows="10" placeholder="Hi QR_gen, I would like to..."
-                name="message" required></textarea>
+            <textarea id="" cols="30" rows="10" placeholder="Hi QR_gen, I would like to..." name="message"
+                required></textarea>
             <br>
 
             <button id="send-but" type="submit"> <img class="telegram-icon" src="assets/vector.png"> Send
                 message</button>
         </form>
+        {{-- validation error  --}}
+        @foreach ($errors->all() as $error)
+            <div style="color: red">{{ $error }}</div>
+        @endforeach
         @if (session()->has('msg'))
             <div style="color: green">{{ session()->get('msg') }}</div>
         @endif

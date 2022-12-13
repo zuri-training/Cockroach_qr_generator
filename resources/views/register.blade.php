@@ -28,14 +28,9 @@
                 </div>
                 <div class="dtype">
                     <label for="password">Password</label>
-                    <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                        title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
-                        placeholder="8+ characters" required>
+                    <input type="password" id="password" name="password" required>
                     <label for="pass">Confirm Password</label>
-                    <input type="password" id="pass" placeholder="8+ characters"name="password_confirmation"
-                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                        title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
-                        required>
+                    <input type="password" id="pass" name="password_confirmation" required>
                 </div>
                 <div class="signup__">
                     <button type="submit" class="login-btn ">Sign up</button>

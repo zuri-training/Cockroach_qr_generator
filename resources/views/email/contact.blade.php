@@ -1,5 +1,9 @@
-<h4>{{ $message['subject'] }}</h4>
-<p>{{ $message['message'] }}</p>
+<h3>{{ $info['subject'] }}</h3>
+
+<strong>
+    <p>{{ $info['message'] }}</p>
+</strong>
 
 
-<p>from {{ $message['name'] }} email: {{ $message['email'] }}</p>
+<p>Name- {{ $info['name'] }} </p>
+<p>email: {{ $info['email'] }}</p>
