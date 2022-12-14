@@ -161,7 +161,6 @@ The Laravel sample project is now up and running! Access it at http://127.0.0.1:
 
 
 
-
             USABILITY TESTING 
 
 After properly implementing all neccessary to ensure a very comfortable user experience both on the frontend and backend as well as the product design Users were able to upload url and pdf files to derive qr codes specifically for their url accounts and pdf files and were also able to go back to saved files on the site and all this done after registration as instructed ,users were also able to most importantly scan the qr codes both for url and pdf ,they also felt totally safe in terms of password input and reset which is a very important part of every website/company
