@@ -36,7 +36,7 @@
                 required></textarea>
             <br>
 
-            <button id="send-but" type="submit"> <img class="telegram-icon" src="assets/vector.png"> Send
+            <button id="send-but" type="submit"> <img class="telegram-icon" src="{{ asset('assets/vector.png') }}"> Send
                 message</button>
         </form>
         {{-- validation error  --}}
