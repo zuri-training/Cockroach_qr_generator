@@ -5,9 +5,18 @@
 
     <link rel="stylesheet" type="text/css" href="{{ asset('css/login&register.module.css') }}">
     <main class="main">
+        
         <div class="popup">
-
             <div class="logo">
+            @if (session()->has('msg'))
+                    <div style="color: rgb(196, 195, 195)">{{ session()->get('msg') }}</div>
+                @endif
+
+                {{-- validation error  --}}
+                @foreach ($errors->all() as $error)
+                    <div style="color: red">{{ $error }}</div>
+                @endforeach
+
                 <h1>Create an account</h1>
                 <p>By signing up, I agree to QR_gen's <span>Terms</span> and <span>privacy policy.</span></p>
             </div>
@@ -38,14 +47,7 @@
                 <div class="reset">
                     <span class="users">Already have an account? <a href="{{ route('login') }}">Login here</a></span>
                 </div>
-                @if (session()->has('msg'))
-                    <div style="color: rgb(196, 195, 195)">{{ session()->get('msg') }}</div>
-                @endif
-
-                {{-- validation error  --}}
-                @foreach ($errors->all() as $error)
-                    <div style="color: red">{{ $error }}</div>
-                @endforeach
+               
                 @csrf
             </form>
         </div>

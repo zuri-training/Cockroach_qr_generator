@@ -14,6 +14,10 @@
                 <span class="first-stage border">2</span><span class="second-stage">Download</span>
             </h1>
         </section>
+        @foreach ($errors->all() as $error)
+        <p style="color:red;">{{ $error }}</p>
+    @endforeach
+
         <div class="main-section">
             <section class="section2">
                 <div class="qr-type">
@@ -42,12 +46,14 @@
 
                     <label for="url" class="url-label">Submit URL for your QR Code
                         <div class="url-generate">
+
                             <input name="url" id="url" type="url" placeholder="https://www.example.com"
                                 class="input_" required />
                             <button type="submit" class="button generate">Generate</button>
                         </div>
                     </label>
-                    <input name="title" type="text" placeholder="Give your URL a name" required />
+                    <input name="title" type="text" placeholder="Give your URL a name" style="width:13rem" required />
+
                 </form>
                 <br />
                 <form action="{{ route('pdf') }}" method="post" class="form2" enctype="multipart/form-data">
@@ -81,8 +87,5 @@
         </section>
     </main>
 
-    @foreach ($errors->all() as $error)
-        <p style="color:red;">{{ $error }}</p>
-    @endforeach
 
 @endsection
