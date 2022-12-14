@@ -14,6 +14,10 @@
                 <span class="first-stage border">2</span><span class="second-stage">Download</span>
             </h1>
         </section>
+        @foreach ($errors->all() as $error)
+        <p style="color:red;">{{ $error }}</p>
+    @endforeach
+
         <div class="main-section">
             <section class="section2">
                 <div class="qr-type">
@@ -83,8 +87,5 @@
         </section>
     </main>
 
-    @foreach ($errors->all() as $error)
-        <p style="color:red;">{{ $error }}</p>
-    @endforeach
 
 @endsection
