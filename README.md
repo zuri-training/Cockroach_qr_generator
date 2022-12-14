@@ -106,6 +106,20 @@ I am a HR manager, I set up my account with the application. Then I paste my Lin
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
+languages used in this project includes 
+HTML,CSS,JS,PHP
+
+TOOLS/FRAMEWORK USED INCLUDES
+FIGMA,GOGGLEDOC,LARAVEL,DRAWSQL,BOOTSTRAP
+
+Framework/QR Code Implementation
+A QR Code software was used and installed on Laravel on the vs studio terminal, the vs studio
+is an app used for coding. Laravel is the framework used on vs studio that enabled us
+implement every single step and process initiated from the backend.
+Laravel also helped ensure everything arranged on the data schema/project structure was
+implemented thereby ensuring the right data base structure was achieved.
+Link to the QR Code Software used; https://www.simplesoftware.io/#/docs/simple-qrcode
+We also made our own Login and Registration files using Laravel MVC structure
 
 # Cockroach_qr_generator
 
@@ -150,3 +164,43 @@ php artisan serve
 ```
 
 The Laravel sample project is now up and running! Access it at http://127.0.0.1:8000.
+
+
+USABILITY TESTING
+After properly implementing all neccessary to ensure a very comfortable user ecxperince both on the frontend and backend as well as the product design Users  were able to upload url and pdf files to derive qr codes specifically for their url accounts and pdf files and were also able to go back to saved files on the site and all this done after registration as instructed ,users were also able to most importantly scan the qr codes both for url and pdf ,they also felt totally safe in terms of password input and reset which is a very important part of every website/company
+
+CONCLUSION
+The whole project was a great learning experince for us,working as a team was amazing,based on the feedback we concluded that the website is effective and ready.
+we are sure our users will have a smooth experince when using the website
+
+                              CONTRIBUTORS
+FULL-NAME                                                    GITHUB-USERNAME
+Olalere olalekan khalid                                      Khalid8789
+
+Adebowale Femi Samson                                        afemsonic
+
+
+ Aminu Shaibu                                                 elameen37
+
+
+ Ligali Sekinat Itunu                                          kiinat
+
+
+ jeremiah Ezarafe                                             Shooga0007                                         
+                                                                 
+ 
+farouk yusuf abiola                                           FabioTECH1
+
+
+Adepoju adeyemi Samuel                                       Sammydepoj
+
+ 
+Omojole aishat eniola                                         Omojole
+
+Biragbara Baridoo Saro                                       Sarodcreator
+
+zoe frempong                                                 sakyifrempong
+
+faith adeoye                                                    ephhay1
+
+oyetunde adeola antonia                                      webathonic
