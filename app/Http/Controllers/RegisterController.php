@@ -21,7 +21,7 @@ class RegisterController extends Controller
             'fname' => 'required|string',
             'lname' => 'required|string',
             'email' => 'required|email',
-            'password' => 'required|confirmed|max:8|min:4|alpha_num',
+            'password' => 'required|confirmed|min:6',
         ]);
 
         $email_exist = User::where('email', $request->email)->first();

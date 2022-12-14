@@ -1,15 +1,14 @@
 "use strict";
 let toggler = document.getElementById("menu");
 let closeMenu = document.getElementById("close");
-let nav = document.getElementById("ul");
+let nav = document.querySelector('.normal-nav');
 
 toggler.onclick=function showMenu(){
-    if (nav.style.display =="none"){
-        nav.style.display ="block";
-    }else{
-        nav.style.display = "none";
-    }
-}
+    nav.removeAttribute('id');
+    nav.classList.add('nav-menu');
 closeMenu.onclick = function closeMenu(){
-    nav.style.display="none";
+    nav.setAttribute('id','ul');
+    nav.classList.remove('nav-menu');
+
+}
 }

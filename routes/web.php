@@ -1,11 +1,11 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PasswordResetController;
 use App\Http\Controllers\QRCodeController;
 use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
-use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,9 +44,17 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/generate-qr-url', [QRCodeController::class, 'url'])->name('url');
     Route::post('/generate-qr-pdf', [QRCodeController::class, 'pdf'])->name('pdf');
 
+    // preview previous qr 
+    Route::get('/preview-qr/url/{id}', [QRCodeController::class, 'preview_url'])->name('preview-qr-url');
+    Route::get('/preview-qr/pdf/{id}', [QRCodeController::class, 'preview_file'])->name('preview-qr-pdf');
+
     //logout user
     Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 });
+
+// contact us 
+Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+Route::post('/contact-us', [ContactController::class, 'contact'])->name('contact-us');
 
 
 /// password reset
