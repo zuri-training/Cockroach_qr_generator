@@ -167,40 +167,67 @@ The Laravel sample project is now up and running! Access it at http://127.0.0.1:
 
 
 USABILITY TESTING
-After properly implementing all neccessary to ensure a very comfortable user ecxperince both on the frontend and backend as well as the product design Users  were able to upload url and pdf files to derive qr codes specifically for their url accounts and pdf files and were also able to go back to saved files on the site and all this done after registration as instructed ,users were also able to most importantly scan the qr codes both for url and pdf ,they also felt totally safe in terms of password input and reset which is a very important part of every website/company
+After properly implementing all neccessary to ensure a very comfortable user experince both on the frontend and backend as well as the product design Users  were able to upload url and pdf files to derive qr codes specifically for their url accounts and pdf files and were also able to go back to saved files on the site and all this done after registration as instructed ,users were also able to most importantly scan the qr codes both for url and pdf ,they also felt totally safe in terms of password input and reset which is a very important part of every website/company
 
 CONCLUSION
 The whole project was a great learning experince for us,working as a team was amazing,based on the feedback we concluded that the website is effective and ready.
 we are sure our users will have a smooth experince when using the website
 
                               CONTRIBUTORS
-FULL-NAME                                                    GITHUB-USERNAME
-Olalere olalekan khalid                                      Khalid8789
+FULL-NAME                                                    
+Olalere olalekan khalid                                      
+GITHUB-USERNAME
+Khalid8789
 
-Adebowale Femi Samson                                        afemsonic
+FULL-NAME 
+Adebowale Femi Samson 
+GITHUB-USERNAME
+afemsonic
 
+FULL-NAME 
+Aminu Shaibu 
 
- Aminu Shaibu                                                 elameen37
+GITHUB-USERNAME
+elameen37
+FULL-NAME 
+Ligali Sekinat Itunu 
+GITHUB-USERNAME
+kiinat
 
-
- Ligali Sekinat Itunu                                          kiinat
-
-
- jeremiah Ezarafe                                             Shooga0007                                         
-                                                                 
+FULL-NAME
+jeremiah Ezarafe
+GITHUB-USERNAME
+ Shooga0007
  
-farouk yusuf abiola                                           FabioTECH1
+FULL-NAME
+farouk yusuf abiola                                           
+GITHUB-USERNAME
+FabioTECH1
 
+Adepoju adeyemi Samuel                                       
+GITHUB-USERNAME
+Sammydepoj
 
-Adepoju adeyemi Samuel                                       Sammydepoj
-
+Omojole aishat eniola                                        
+GITHUB-USERNAME
+ Omojole
  
-Omojole aishat eniola                                         Omojole
+ FULL-NAME
+Biragbara Baridoo Saro                                       
+GITHUB-USERNAME
+Sarodcreator
 
-Biragbara Baridoo Saro                                       Sarodcreator
+FULL-NAME
+zoe frempong 
+GITHUB-USERNAME
+sakyifrempong
 
-zoe frempong                                                 sakyifrempong
+FULL-NAME
+faith adeoye  
+GITHUB-USERNAME
+ephhay1
 
-faith adeoye                                                    ephhay1
-
-oyetunde adeola antonia                                      webathonic
+FULL-NAME
+oyetunde adeola antonia
+GITHUB-USERNAME
+ webathonic
