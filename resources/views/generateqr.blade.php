@@ -63,11 +63,10 @@
                             <div class="generate-div">
                                 <p>Browse files or drag file here</p>
                             </div>
-                            <input name="title" type="text" placeholder="Give your PDF a name" required />
-
                             <input type="file" id="pdf" name="pdf" accept="application/pdf" required />
                             <br>
                         </label>
+                        <input name="title" type="text" placeholder="Give your PDF a name" required />
 
                         <button class="button pdf" type="submit">Generate</button>
                     </div>
