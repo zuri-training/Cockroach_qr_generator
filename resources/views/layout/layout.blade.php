@@ -31,9 +31,6 @@
                             <button class="btn login">Logout</button>
                         </form>
                     @endauth
-
-
-
                 </div>
             </ul>
             <i class="fa-sharp fa-solid fa-bars" id="menu"></i>

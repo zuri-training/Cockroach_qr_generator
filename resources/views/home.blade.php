@@ -132,8 +132,6 @@
                                     <div class="card">
                                         <div
                                             class="card-header py-2 d-flex flex-row align-items-center justify-content-between">
-                                            {{-- <img src="assets/qr_icons/qr-code-sample.png"> --}}
-                                            {{-- {!! QrCode::format('png')->size(300)->generate(asset('uploads/pdf') . '/' . $file->filename) !!} --}}
                                             {!! QrCode::size(150)->generate(asset('uploads/pdf') . '/' . $file->filename) !!}
 
                                             <br><br>
@@ -143,19 +141,6 @@
                                                 <span>PDF</span><br>
                                                 <i class="fas fa-thin fa-clock"></i>
                                                 <span>{{ $file->created_at->format('d-m-y') }}</span><br><br>
-                                                {{-- <a class="dropdown-toggle btn btn-primary btn-sm" href="#"
-                                                    role="button" id="dropdownMenuLink" data-toggle="dropdown"
-                                                    aria-haspopup="true" aria-expanded="false"
-                                                    style="background-color:#5683F6;">
-                                                    Download
-                                                </a>
-                                                <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                                                    aria-labelledby="dropdownMenuLink">
-                                                    <a class="dropdown-item" href="assets/qr_icons/qr-code-sample.pdf"
-                                                        download="qr_code34554">PDF</a>
-                                                    <a class="dropdown-item" href="assets/qr_icons/qr-code-sample.png"
-                                                        download="qr_code34554">png</a>
-                                                </div> --}}
                                                 <a href="{{ route('preview-qr-pdf', $file->id) }}">Preview</a>
 
                                             </div>
@@ -177,22 +162,10 @@
                                             <br><br>
                                             <div>
                                                 <h6>{{ $link->title }}</h6>
-                                                {{-- <img src="assets/url-icon.png" alt="url-icon" class="img-container"> --}}
                                                 <span>Link</span><br>
                                                 <i class="fas fa-thin fa-clock"></i>
                                                 <span>{{ $link->created_at->format('d-m-y') }}</span><br><br>
-                                                {{-- <a class="dropdown-toggle btn btn-primary btn-sm" href="#"
-                                                    role="button" id="dropdownMenuLink" data-toggle="dropdown"
-                                                    aria-haspopup="true" aria-expanded="false"
-                                                    style="background-color:#5683F6;">
-                                                    Download
-                                                </a>
-                                                <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                                                    aria-labelledby="dropdownMenuLink">
-                                                    <a class="dropdown-item" href="assets/qr_icons/qr-code-sample.pdf"
-                                                        download="qr_code34554">PDF</a>
-                                                    <a class="dropdown-item" href="assets/qr_icons/qr-code-sample.png"
-                                                        download="qr_code34554">png</a> --}}
+
                                                 <a href="{{ route('preview-qr-url', $link->id) }}">Preview</a>
                                             </div>
                                         </div>

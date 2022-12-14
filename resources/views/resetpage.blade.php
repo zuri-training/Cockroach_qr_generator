@@ -4,7 +4,6 @@
 
     <link rel="stylesheet" href="{{ asset('css/home.module.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/login&register.module.css') }}">
-    {{-- <link rel="stylesheet" type="text/css" href="css/login&register.module.css"> --}}
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
