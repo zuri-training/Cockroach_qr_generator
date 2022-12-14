@@ -14,6 +14,14 @@
             </div>
                 <p>Please enter your registered email below to receive password reset
                     instruction</p>
+                    @if (session()->has('msg'))
+                <div style="color:red">user with this email doesn't exist</div>
+            @endif
+            @if (session()->has('msg2'))
+                <div  style="color:red">{{ session()->get('msg2') }}</div>
+            @endif
+
+
             <div class="dtype">
                 <label for="email">Email</label>
                 <br>
@@ -25,13 +33,7 @@
                 <span class="users">Remember
                     password?<a href="{{ route('login') }}">log in</a>
                 </span>
-            </div>
-            @if (session()->has('msg'))
-                <div>user with this email doesn't exist</div>
-            @endif
-            @if (session()->has('msg2'))
-                <div>{{ session()->get('msg2') }}</div>
-            @endif
+           </div>
         </form>
 </main>
 
