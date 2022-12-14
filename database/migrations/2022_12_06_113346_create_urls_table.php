@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('url_link');
+            $table->string('title');
             $table->foreignId('user_id')->constrained();
         });
     }

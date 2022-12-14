@@ -59,11 +59,6 @@
                     @csrf
                     <button class="btn register">Logout</button>
                 </form>
-                {{-- <a class="nav-link collapsed" href="#" data-toggle="" data-target="" aria-expanded="true"
-                    aria-controls="collapsePage">
-                    <img src="https://img.icons8.com/metro/52/FFFFFF/exit.png" height="55" width="70" />
-
-                </a> --}}
                 <div id="collapsePage" class="collapse" aria-labelledby="headingPage" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="#"></a>
@@ -143,12 +138,12 @@
 
                                             <br><br>
                                             <div>
-                                                <h6>Untitled</h6>
+                                                <h6>{{ $file->title }}</h6>
                                                 <i class="fas fa-solid fa-file-pdf" style="color:#5683F6;"></i>
                                                 <span>PDF</span><br>
                                                 <i class="fas fa-thin fa-clock"></i>
                                                 <span>{{ $file->created_at->format('d-m-y') }}</span><br><br>
-                                                <a class="dropdown-toggle btn btn-primary btn-sm" href="#"
+                                                {{-- <a class="dropdown-toggle btn btn-primary btn-sm" href="#"
                                                     role="button" id="dropdownMenuLink" data-toggle="dropdown"
                                                     aria-haspopup="true" aria-expanded="false"
                                                     style="background-color:#5683F6;">
@@ -160,7 +155,9 @@
                                                         download="qr_code34554">PDF</a>
                                                     <a class="dropdown-item" href="assets/qr_icons/qr-code-sample.png"
                                                         download="qr_code34554">png</a>
-                                                </div>
+                                                </div> --}}
+                                                <a href="{{ route('preview-qr-pdf', $file->id) }}">Preview</a>
+
                                             </div>
                                         </div>
                                     </div>
@@ -175,18 +172,16 @@
                                     <div class="card">
                                         <div
                                             class="card-header py-2 d-flex flex-row align-items-center justify-content-between">
-                                            {{-- <img src="assets/qr_icons/qr-code-sample.png"> --}}
-                                            {{-- {!! QrCode::format('png')->size(300)->generate(asset('uploads/pdf') . '/' . $file->filename) !!} --}}
                                             {!! QrCode::size(150)->generate($link->url_link) !!}
 
                                             <br><br>
                                             <div>
-                                                <h6>Untitled</h6>
+                                                <h6>{{ $link->title }}</h6>
                                                 {{-- <img src="assets/url-icon.png" alt="url-icon" class="img-container"> --}}
                                                 <span>Link</span><br>
                                                 <i class="fas fa-thin fa-clock"></i>
                                                 <span>{{ $link->created_at->format('d-m-y') }}</span><br><br>
-                                                <a class="dropdown-toggle btn btn-primary btn-sm" href="#"
+                                                {{-- <a class="dropdown-toggle btn btn-primary btn-sm" href="#"
                                                     role="button" id="dropdownMenuLink" data-toggle="dropdown"
                                                     aria-haspopup="true" aria-expanded="false"
                                                     style="background-color:#5683F6;">
@@ -197,20 +192,21 @@
                                                     <a class="dropdown-item" href="assets/qr_icons/qr-code-sample.pdf"
                                                         download="qr_code34554">PDF</a>
                                                     <a class="dropdown-item" href="assets/qr_icons/qr-code-sample.png"
-                                                        download="qr_code34554">png</a>
-                                                </div>
+                                                        download="qr_code34554">png</a> --}}
+                                                <a href="{{ route('preview-qr-url', $link->id) }}">Preview</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            @endforeach
                         </div>
-                    @endif
+                    @endforeach
+                </div>
+                @endif
 
-                    <script src="js/vendor/jquery/jquery.min.js"></script>
-                    <script src="js/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-                    <script src="js/vendor/jquery-easing/jquery.easing.min.js"></script>
-                    <script src="js/effects-admin.min.js"></script>
+                <script src="js/vendor/jquery/jquery.min.js"></script>
+                <script src="js/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+                <script src="js/vendor/jquery-easing/jquery.easing.min.js"></script>
+                <script src="js/effects-admin.min.js"></script>
 
 </body>
 

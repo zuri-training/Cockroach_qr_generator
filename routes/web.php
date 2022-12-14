@@ -44,6 +44,10 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/generate-qr-url', [QRCodeController::class, 'url'])->name('url');
     Route::post('/generate-qr-pdf', [QRCodeController::class, 'pdf'])->name('pdf');
 
+    // preview previous qr 
+    Route::get('/preview-qr/url/{id}', [QRCodeController::class, 'preview_url'])->name('preview-qr-url');
+    Route::get('/preview-qr/pdf/{id}', [QRCodeController::class, 'preview_file'])->name('preview-qr-pdf');
+
     //logout user
     Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 });

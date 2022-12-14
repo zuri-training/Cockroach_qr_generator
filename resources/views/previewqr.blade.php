@@ -1,5 +1,5 @@
 @extends('layout.layout')
-@section('title', 'Home | QR Generator')
+@section('title', 'Preview | QR Generator')
 @section('content')
     {{-- <link rel="shortcut icon" href="assets/qr_icons/logo33.png" type="image/x-icon"> --}}
     <link rel="stylesheet" href="{{ asset('css/choosestyle.module.css') }}" />
@@ -20,13 +20,16 @@
             </h1>
         </section>
         <section class="download-section1">
-            <h2>Congratulations!</h2>
-            <h3>Your QR Code is ready.</h3>
+            {{-- <h2>Congratulations!</h2> --}}
+            <h3>Here is your QR Code.</h3>
             {{-- <img src="assets/download-qr.jpg" alt="downloaded-qr-code" /> --}}
+            <br>
             <div class="qrcode" style="padding-top:10px;">
-                @if (session()->has('url_link'))
+                @if ($file)
+                    <p class="title">{{ $file->title }}</p>
                     {!! QrCode::size(300)->generate(session()->get('url_link')) !!}
-                @elseif (session()->get('filename'))
+                @elseif ($link)
+                    <p class="title">{{ $link->title }}</p>
                     {!! QrCode::size(300)->generate(asset('uploads/pdf') . '/' . session()->get('filename')) !!}
                 @endif
 
@@ -59,7 +62,7 @@
         <section class="back-prev">
             <div class="back">
                 <a href="{{ route('generate') }}">
-                    <img src="assets/arrow2.png" alt="arrow" class="back-arrow" />
+                    <img src="{{ asset('assets/arrow2.png') }}" alt="arrow" class="back-arrow" />
                 </a>
                 <h4 class="colored back-word">Back</h4>
             </div>

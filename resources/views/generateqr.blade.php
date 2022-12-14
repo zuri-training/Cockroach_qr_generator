@@ -39,6 +39,7 @@
                 </div>
                 <form action="{{ route('url') }}" method="post" class="upload-form">
                     @csrf
+
                     <label for="url" class="url-label">Submit URL for your QR Code
                         <div class="url-generate">
                             <input name="url" id="url" type="url" placeholder="https://www.example.com"
@@ -46,6 +47,7 @@
                             <button type="submit" class="button generate">Generate</button>
                         </div>
                     </label>
+                    <input name="title" type="text" placeholder="Give your URL a name" required />
                 </form>
                 <br />
                 <form action="{{ route('pdf') }}" method="post" class="form2" enctype="multipart/form-data">
@@ -55,9 +57,12 @@
                             <div class="generate-div">
                                 <p>Browse files or drag file here</p>
                             </div>
+                            <input name="title" type="text" placeholder="Give your PDF a name" required />
 
                             <input type="file" id="pdf" name="pdf" accept="application/pdf" required />
+                            <br>
                         </label>
+
                         <button class="button pdf" type="submit">Generate</button>
                     </div>
                 </form>
@@ -70,36 +75,14 @@
         </div>
         <section class="back">
             <a href="{{ route('home') }}">
-                <img src="assets/arrow2.png" alt="arrow" class="back-arrow" />
+                <img src="{{ asset('assets/arrow2.png') }}" alt="arrow" class="back-arrow" />
             </a>
             <h4 class="colored back-word">Back</h4>
         </section>
     </main>
-    {{-- <form action="{{ route('logout') }}" method="post">
-        @csrf
-        <input type="submit" value="Logout">
-    </form>
-    <h4>Generate QRCode</h4>
 
-    <h5>url</h5>
-    <form action="{{ route('url') }}" method="post">
-        @csrf
-        <input type="text" name="url" required>
-        <input type="submit" value="Generate">
-
-    </form>
-
-    <h5>pdf</h5>
-    <form action="{{ route('pdf') }}" method="post" enctype="multipart/form-data">
-        @csrf
-        <input type="file" name="pdf">
-        <input type="submit" value="Generate">
-
-    </form> --}}
-
-    {{-- 
     @foreach ($errors->all() as $error)
         <p style="color:red;">{{ $error }}</p>
-    @endforeach --}}
+    @endforeach
 
 @endsection
