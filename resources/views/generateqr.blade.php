@@ -9,7 +9,7 @@
             <h1 class="stages">
                 <span class="first-stage colored">1</span><span class="second-stage colored">Upload</span>
             </h1>
-            <img src="assets/Arrow1.png" alt="arrow-1" class="arrow-1" />
+            <img src="{{ asset('assets/Arrow1.png') }}" alt="arrow-1" class="arrow-1" />
             <h1 class="stages">
                 <span class="first-stage border">2</span><span class="second-stage">Download</span>
             </h1>
@@ -23,14 +23,14 @@
                 </div>
                 <div class="uploads">
                     <div class="container">
-                        <img src="assets/pdf-icon.png" alt="pdf-icon" class="img-container" />
+                        <img src="{{ asset('assets/pdf-icon.png') }}" alt="pdf-icon" class="img-container" />
                         <div>
                             <h3>PDF</h3>
                             <p>Share PDF Document</p>
                         </div>
                     </div>
                     <div class="container">
-                        <img src="assets/url-icon.png" alt="url-icon" class="img-container" />
+                        <img src="{{ asset('assets/url-icon.png') }}" alt="url-icon" class="img-container" />
                         <div>
                             <h3>Website URL</h3>
                             <p>Link to a Website URL</p>
@@ -72,7 +72,7 @@
             <section class="section3">
                 <h2>QR Code</h2>
                 <hr />
-                <img src="assets/qr-codestyle.png" alt="qr-code" />
+                <img src="{{ asset('assets/qr-codestyle.png') }}" alt="qr-code" />
             </section>
         </div>
         <section class="back">

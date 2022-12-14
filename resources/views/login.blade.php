@@ -8,20 +8,20 @@
 
     <main class="main">
         <div class="r-container">
-        {{-- validation error  --}}
-                @foreach ($errors->all() as $error)
-                    <div style="color: red">{{ $error }}</div>
-                @endforeach
-                @if (session()->has('msg'))
-                    <div style="color: red;">{{ session()->get('msg') }}</div>
-                @endif
+            {{-- validation error  --}}
+            @foreach ($errors->all() as $error)
+                <div style="color: red">{{ $error }}</div>
+            @endforeach
+            @if (session()->has('msg'))
+                <div style="color: red;">{{ session()->get('msg') }}</div>
+            @endif
 
-                @if (session()->has('msg2'))
-                    <div style="color: green;">{{ session()->get('msg2') }}</div>
-                @endif
+            @if (session()->has('msg2'))
+                <div style="color: green;">{{ session()->get('msg2') }}</div>
+            @endif
 
             <div class="logo">
-                <img src="./assets/qr_icons/logo33.png" alt="icon">
+                <img src="{{ asset('assets/qr_icons/logo33.png') }}" alt="icon">
                 <h1>Welcome Back</h1>
                 <p>Start The Adventure</p>
             </div>

@@ -7,11 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link href="assets/qr_icons/logo33.png" rel="icon">
+    <link href="{{ asset('assets/qr_icons/logo33.png') }}" rel="icon">
     <title>QR_Code - Dashboard</title>
-    <link href="js/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="js/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="css/dashboardmn.module.css" rel="stylesheet">
+    <link href="{{ asset('js/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('js/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/dashboardmn.module.css') }}" rel="stylesheet">
 </head>
 
 <body id="page-top">
@@ -176,10 +176,10 @@
                 </div>
                 @endif
 
-                <script src="js/vendor/jquery/jquery.min.js"></script>
-                <script src="js/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-                <script src="js/vendor/jquery-easing/jquery.easing.min.js"></script>
-                <script src="js/effects-admin.min.js"></script>
+                <script src="{{ asset('js/vendor/jquery/jquery.min.js') }}"></script>
+                <script src="{{ asset('js/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+                <script src="{{ asset('js/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
+                <script src="{{ asset('js/effects-admin.min.js') }}"></script>
 
 </body>
 

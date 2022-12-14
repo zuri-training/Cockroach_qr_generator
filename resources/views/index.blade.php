@@ -13,7 +13,7 @@
             <button class="btn"> <a class="btn create" href="login.html">+ Create QR Code</a> </button>
         </div>
         <div class="heroImage">
-            <img src="assets/QR-code.png" alt='QR code' />
+            <img src="{{ asset('assets/QR-code.png') }}" alt='QR code' />
         </div>
     </section>
     <section class="show">
@@ -74,7 +74,7 @@
             <p>Generate QR Codes that store digital information.
                 Download as PNG,PDF,JPEG or Share to social media or email.
             </p>
-            <button class="btn"> <a class="btn create" href="login.html">+ Create QR Code</a></button>
+            <button class="btn"> <a class="btn create" href="{{ route('generate') }}">+ Create QR Code</a></button>
         </div>
         <div class="offerImage">
             <img src="{{ asset('assets/image.png') }}" alt="qr code">

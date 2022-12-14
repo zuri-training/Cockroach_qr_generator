@@ -53,5 +53,5 @@
         </div>
     </main>
 
-    <script type="text/javascript" src="js/forgotpassword.js"></script>
+    <script type="text/javascript" src="{{ asset('js/forgotpassword.js') }}"></script>
 @endsection
