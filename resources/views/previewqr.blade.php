@@ -27,10 +27,10 @@
             <div class="qrcode" style="padding-top:10px;">
                 @if ($file)
                     <p class="title">{{ $file->title }}</p>
-                    {!! QrCode::size(300)->generate(session()->get('url_link')) !!}
+                    {!! QrCode::size(300)->generate(asset('uploads/pdf') . '/' . $file->filename) !!}
                 @elseif ($link)
                     <p class="title">{{ $link->title }}</p>
-                    {!! QrCode::size(300)->generate(asset('uploads/pdf') . '/' . session()->get('filename')) !!}
+                    {!! QrCode::size(300)->generate($link->url_link) !!}
                 @endif
 
             </div>
@@ -61,7 +61,7 @@
         </section>
         <section class="back-prev">
             <div class="back">
-                <a href="{{ route('generate') }}">
+                <a href="{{ route('home') }}">
                     <img src="{{ asset('assets/arrow2.png') }}" alt="arrow" class="back-arrow" />
                 </a>
                 <h4 class="colored back-word">Back</h4>

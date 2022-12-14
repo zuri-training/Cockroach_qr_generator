@@ -121,6 +121,10 @@ implemented thereby ensuring the right data base structure was achieved.
 Link to the QR Code Software used; https://www.simplesoftware.io/#/docs/simple-qrcode
 We also made our own Login and Registration files using Laravel MVC structure
 
+languages used in this project includes HTML,CSS,JS,PHPTOOLS/FRAMEWORK USED INCLUDES FIGMA,GOGGLEDOC,LARAVEL,DRAWSQL,BOOTSTRAP
+Framework/QR Code Implementation A QR Code software was used and installed on Laravel on the vs studio terminal, the vs studio is an app used for coding. Laravel is the framework used on vs studio that enabled us implement every single step and process initiated from the backend. Laravel also helped ensure everything arranged on the data schema/project structure was implemented thereby ensuring the right data base structure was achieved. Link to the QR Code Software used; https://www.simplesoftware.io/#/docs/simple-qrcode
+We also made our own Login and Registration files using Laravel MVC structure
+
 # Cockroach_qr_generator
 
 ## Getting started
@@ -162,6 +166,7 @@ Then launch the server:
 ```bash
 php artisan serve
 ```
+
 
 The Laravel sample project is now up and running! Access it at http://127.0.0.1:8000.
 
@@ -236,3 +241,4 @@ FULL-NAME
 OTUBU ANITA JOY
 GITHUB-USERNAME 
 designita2
+

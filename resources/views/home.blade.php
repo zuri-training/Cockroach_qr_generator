@@ -75,30 +75,6 @@
                     <button id="sidebarToggleTop" class="btn  btn-link rounded-circle mr-3">
                         <i class="fa fa-bars" style="color:#5683F6;"></i>
                     </button>
-                    <ul class="navbar-nav ml-auto">
-
-                        <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-search fa-fw"></i>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                aria-labelledby="searchDropdown">
-                                <form class="navbar-search">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-1 small"
-                                            placeholder="What do you want to look for?" aria-label="Search"
-                                            aria-describedby="basic-addon2" style="border-color: #5683F6;">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-primary" type="button">
-                                                <i class="fas fa-search fa-sm"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </li>
-                    </ul>
                 </nav>
                 <!-- Topbar -->
 
@@ -162,6 +138,7 @@
                                             <br><br>
                                             <div>
                                                 <h6>{{ $link->title }}</h6>
+                                                <i class="fas fa-solid fa-link" style="color:#5683F6;"></i>
                                                 <span>Link</span><br>
                                                 <i class="fas fa-thin fa-clock"></i>
                                                 <span>{{ $link->created_at->format('d-m-y') }}</span><br><br>

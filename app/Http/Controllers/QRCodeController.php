@@ -24,7 +24,7 @@ class QRCodeController extends Controller
     function qrcode()
     {
         if (!session()->has('url_link') && !session()->has('filename')) {
-            return back();
+            return redirect('home');
         }
         return view('qrcode');
     }
