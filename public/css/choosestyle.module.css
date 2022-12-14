@@ -177,11 +177,18 @@ main {
 .url-generate {
   border: 1px solid #c7c6c680;
   background-color: #ffffff;
-  margin-top: 5px;
+  margin: 5px 0 10px 0;
+  width: 33.5rem;
 }
 .section3 {
   text-align: center;
   margin-top: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2rem;
+  display: flex;
+
 }
 .section3 > h2 {
   font-size: 18px;
@@ -332,6 +339,10 @@ hr {
     flex-direction: column;
     padding: 3rem 0.5rem;
   }
+  .upload-form{
+    text-align: center;
+
+  }
   .popup{
     width: 90vw;
     top: 20%;
@@ -379,7 +390,7 @@ hr {
     justify-content: center;
   }
   .section3 {
-    margin-top: 2rem;
+    display: flex;
   }
   .choose {
     margin-top: 20vh;

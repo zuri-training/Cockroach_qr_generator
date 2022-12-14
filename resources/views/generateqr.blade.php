@@ -42,12 +42,14 @@
 
                     <label for="url" class="url-label">Submit URL for your QR Code
                         <div class="url-generate">
+
                             <input name="url" id="url" type="url" placeholder="https://www.example.com"
                                 class="input_" required />
                             <button type="submit" class="button generate">Generate</button>
                         </div>
                     </label>
-                    <input name="title" type="text" placeholder="Give your URL a name" required />
+                    <input name="title" type="text" placeholder="Give your URL a name" style="width:13rem" required />
+
                 </form>
                 <br />
                 <form action="{{ route('pdf') }}" method="post" class="form2" enctype="multipart/form-data">
