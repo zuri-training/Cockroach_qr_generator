@@ -153,13 +153,12 @@ Then launch the server:
 php artisan serve
 ```
 
-The Laravel sample project is now up and running! Access it at http://127.0.0.1:8000.
+The Laravel sample project is now up and running! Access it at http://127.0.0.1:8000
 
-            PRODUCT DESIGNS FIGMA PROTOTYPE LINK
+
+PRODUCT DESIGNS FIGMA PROTOTYPE LINK  https://www.figma.com/proto/MU63D4eol1BFrkcQOwnYqD/Qr-Gen?node-id=484%3A253&scaling=min-zoom&page-id=421%3A717&starting-point-node-id=484%3A253
             
-     https://www.figma.com/proto/MU63D4eol1BFrkcQOwnYqD/Qr-Gen?node-id=484%3A253&scaling=min-zoom&page-id=421%3A717&starting-point-node-id=484%3A253
-
-
+    
 
             USABILITY TESTING 
 
