@@ -162,6 +162,7 @@
                                             <br><br>
                                             <div>
                                                 <h6>{{ $link->title }}</h6>
+                                                <i class="fas fa-solid fa-link" style="color:#5683F6;"></i>
                                                 <span>Link</span><br>
                                                 <i class="fas fa-thin fa-clock"></i>
                                                 <span>{{ $link->created_at->format('d-m-y') }}</span><br><br>
