@@ -51,7 +51,7 @@ class PasswordResetController extends Controller
     function password_reset(Request $request, $token)
     {
         $request->validate([
-            'password' => 'max:8|min:4|alpha_num|confirmed',
+            'password' => 'min:6|confirmed',
         ]);
         // dd($request->password);
 

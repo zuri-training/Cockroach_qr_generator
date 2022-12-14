@@ -4,7 +4,7 @@
 const download=document.querySelector('.download');
 const popup=document.querySelector('.popup');
 const display=document.querySelector('.display');
-const close=document.querySelector('.fa-x');
+const close=document.querySelector('.close-bar');
 let poppedup=false;
 
 
@@ -31,7 +31,7 @@ function chooseFormat(){
 
 //Event listeners
 close.addEventListener('click',function(){
-if(poppedup){
+  if(poppedup){
     display.style.opacity='0';
   poppedup=false;
 }

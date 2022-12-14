@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\File;
 use App\Models\Url;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class QRCodeController extends Controller
@@ -23,22 +24,48 @@ class QRCodeController extends Controller
     function qrcode()
     {
         if (!session()->has('url_link') && !session()->has('filename')) {
-            return back();
+            return redirect('home');
         }
         return view('qrcode');
+    }
+
+    function preview_file($id)
+    {
+        $user = User::where('id', auth()->id())->first();
+        $file = File::where('id', $id)->where('user_id', $user->id)->first();
+        if (!$file) {
+            abort(404);
+        }
+        return view('previewqr', [
+            'file' => $file,
+            'link' => null
+        ]);
+    }
+
+    function preview_url($id)
+    {
+        $user = User::where('id', auth()->id())->first();
+        $url = Url::where('id', $id)->where('user_id', $user->id)->first();
+        if (!$url) {
+            abort(404);
+        }
+        return view('previewqr', [
+            'link' => $url,
+            'file' => null
+        ]);
     }
 
     function url(Request $request)
     {
         $request->validate([
-            'url' => 'required|url'
+            'url' => 'required|url',
+            'title' => 'required|string'
         ]);
-
-        // return $request->url;
 
         Url::create([
             'url_link' => $request->url,
             'user_id' => auth()->id(),
+            'title' => $request->title
         ]);
         return redirect()->route('qrcode')->with('url_link', $request->url);
     }
@@ -46,7 +73,8 @@ class QRCodeController extends Controller
     function pdf(Request $request)
     {
         $request->validate([
-            'pdf' => 'required|max:15000'
+            'pdf' => 'required|max:15000',
+            'title' => 'required|string'
         ]);
 
         $pdf = $request->file('pdf');
@@ -58,6 +86,7 @@ class QRCodeController extends Controller
         File::create([
             'filename' => $pdf_name,
             'user_id' => auth()->id(),
+            'title' => $request->title
         ]);
 
         return redirect()->route('qrcode')->with('filename', $pdf_name);

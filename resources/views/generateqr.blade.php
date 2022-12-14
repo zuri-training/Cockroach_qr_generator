@@ -1,5 +1,5 @@
 @extends('layout.layout')
-@section('title', 'GEnerate | QR Generator')
+@section('title', 'Generate | QR Generator')
 @section('content')
     <link rel="stylesheet" href="{{ asset('css/choosestyle.module.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/home.module.css') }}">
@@ -9,11 +9,15 @@
             <h1 class="stages">
                 <span class="first-stage colored">1</span><span class="second-stage colored">Upload</span>
             </h1>
-            <img src="assets/Arrow1.png" alt="arrow-1" class="arrow-1" />
+            <img src="{{ asset('assets/Arrow1.png') }}" alt="arrow-1" class="arrow-1" />
             <h1 class="stages">
                 <span class="first-stage border">2</span><span class="second-stage">Download</span>
             </h1>
         </section>
+        @foreach ($errors->all() as $error)
+        <p style="color:red;">{{ $error }}</p>
+    @endforeach
+
         <div class="main-section">
             <section class="section2">
                 <div class="qr-type">
@@ -23,14 +27,14 @@
                 </div>
                 <div class="uploads">
                     <div class="container">
-                        <img src="assets/pdf-icon.png" alt="pdf-icon" class="img-container" />
+                        <img src="{{ asset('assets/pdf-icon.png') }}" alt="pdf-icon" class="img-container" />
                         <div>
                             <h3>PDF</h3>
                             <p>Share PDF Document</p>
                         </div>
                     </div>
                     <div class="container">
-                        <img src="assets/url-icon.png" alt="url-icon" class="img-container" />
+                        <img src="{{ asset('assets/url-icon.png') }}" alt="url-icon" class="img-container" />
                         <div>
                             <h3>Website URL</h3>
                             <p>Link to a Website URL</p>
@@ -39,13 +43,17 @@
                 </div>
                 <form action="{{ route('url') }}" method="post" class="upload-form">
                     @csrf
+
                     <label for="url" class="url-label">Submit URL for your QR Code
                         <div class="url-generate">
+
                             <input name="url" id="url" type="url" placeholder="https://www.example.com"
                                 class="input_" required />
                             <button type="submit" class="button generate">Generate</button>
                         </div>
                     </label>
+                    <input name="title" type="text" placeholder="Give your URL a name" style="width:13rem" required />
+
                 </form>
                 <br />
                 <form action="{{ route('pdf') }}" method="post" class="form2" enctype="multipart/form-data">
@@ -55,9 +63,11 @@
                             <div class="generate-div">
                                 <p>Browse files or drag file here</p>
                             </div>
-
                             <input type="file" id="pdf" name="pdf" accept="application/pdf" required />
+                            <br>
                         </label>
+                        <input name="title" type="text" placeholder="Give your PDF a name" required />
+
                         <button class="button pdf" type="submit">Generate</button>
                     </div>
                 </form>
@@ -65,41 +75,16 @@
             <section class="section3">
                 <h2>QR Code</h2>
                 <hr />
-                <img src="assets/qr-codestyle.png" alt="qr-code" />
+                <img src="{{ asset('assets/qr-codestyle.png') }}" alt="qr-code" />
             </section>
         </div>
         <section class="back">
-            <a href="dashboard_1.html">
-                <img src="assets/arrow2.png" alt="arrow" class="back-arrow" />
+            <a href="{{ route('home') }}">
+                <img src="{{ asset('assets/arrow2.png') }}" alt="arrow" class="back-arrow" />
             </a>
             <h4 class="colored back-word">Back</h4>
         </section>
     </main>
-    {{-- <form action="{{ route('logout') }}" method="post">
-        @csrf
-        <input type="submit" value="Logout">
-    </form>
-    <h4>Generate QRCode</h4>
 
-    <h5>url</h5>
-    <form action="{{ route('url') }}" method="post">
-        @csrf
-        <input type="text" name="url" required>
-        <input type="submit" value="Generate">
-
-    </form>
-
-    <h5>pdf</h5>
-    <form action="{{ route('pdf') }}" method="post" enctype="multipart/form-data">
-        @csrf
-        <input type="file" name="pdf">
-        <input type="submit" value="Generate">
-
-    </form> --}}
-
-    {{-- 
-    @foreach ($errors->all() as $error)
-        <p style="color:red;">{{ $error }}</p>
-    @endforeach --}}
 
 @endsection

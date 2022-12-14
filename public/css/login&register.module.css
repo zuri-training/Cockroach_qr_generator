@@ -1,260 +1,125 @@
-body {
-    background-color: #DDE6FD;
-    font-family: 'Poppins';
-    font-style: normal;
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-.r-container {
-    background-color: #FBFBFB;
-    position: relative;
+.main{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    max-height: 870px;
-    max-width: 900px;
-    left: 230px;
-    top: 56px;
-    margin-bottom: 96px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.1);
+    background-color:#D9D9D9;;
 }
-
-.title {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 48px;
-    letter-spacing: 0em;
+.r-container{
+    font-family: "Poppins", sans-serif;
+    margin: 4rem 0;
+    background-color:#FBFBFB;
+    padding: 5rem 3rem;
+    width: 550px;
+}
+.popup{
+    font-family: "Poppins", sans-serif;
+    margin: 4rem 0;
+    background-color:#FBFBFB;
+    padding: 2rem 3rem;
+    width: 550px;
+}
+.new-pass{
+    width: 650px;
+}
+.popup>p{
+    margin-bottom: 1rem;
+}
+.logo{
     text-align: center;
-    color: #101010;
-    padding-top: 48px;
 }
-
-span,
-.users a {
-    color: #5683F6;
+.logo>h1{
+    margin: 1rem 0;
 }
-
-p {
-    text-align: center;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    margin-bottom: 10px;
+.dtype>input{
+    margin: .5rem 0;
+    width: 100%;
+    height: 2rem;
 }
-
-form,
-.pop-form label {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 32px;
-    margin: 10px;
+.dtype>input:focus{
+outline:1px solid rgb(216, 213, 213) ;
 }
-
-form {
-    margin-left: 109px;
+.dtype>label{
+    font-weight: 600;
 }
-
-form .dtype input {
-    display: block;
-    margin: 18px 0px;
-    width: 705px;
-    height: 56px;
-    margin-right: 20px;
+.rem>div>label{
+    font-weight: 600;
+   
 }
-
-.pop-form input {
-    display: block;
-    margin: 10px;
-    width: 592px;
-    height: 56px;
-}
-
-form .name {
+.name{
     display: flex;
-}
-
-form .name input {
-    width: 315px;
-    height: 56px;
-    margin: 18px 0px;
-}
-
-button,
-.reset button {
-    background-color: #5683F6;
-    border-radius: 10px;
-    border: none;
-    color: #FBFBFB;
-    font-size: 24px;
-    margin: 18px 0px;
-}
-
-button {
-    width: 705px;
-    height: 56px;
-}
-
-.reset button, .reset-pass button {
-    width: 310px;
-    margin-top: 40px;
-    margin-left: 150px;
-}
-.reset-pass button{
-    margin-top: 20px;
-    margin-bottom: 50px;
-}
-
-
-.users {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 32px;
-    text-align: center;
-    padding-bottom: 82px;
-
-}
-
-a {
-    text-decoration: none;
-}
-
-.logo {
-    text-align: center;
-    padding-top: 70px;
-}
-
-.rem {
-    display: flex;
-    flex-wrap: nowrap;
     justify-content: space-between;
-    margin-right: 80px;
+}
+.name>div{
+    width:45% ;
+}
+.name>div>label{
+    font-weight: 600;
 
 }
-
-.rem a {
-    opacity: .4;
+.name>div>input{
+    width: 100%;
+    height:2rem ;
+}
+.name>div>input:focus{
+    outline: 1px solid #D9D9D9;
 }
 
-.popup {
-    position: relative;
-    width: 613px;
-    height: 475px;
-    background: #FBFBFB;
-    box-shadow: 2px 5px 8px rgba(0, 0, 0, 0.18);
-    border-radius: 20px;
-    align-items: center;
-    left: 350px;
-    top: 76px;
-    margin-bottom: 96px;
+.rem{
+    margin: 1rem 0 2rem 0;
+    display: flex;
+    justify-content: space-between;
 }
+.forgot>a{
+    color:#5683F6;
+    opacity: .8;
 
-.close-btn {
-    position: absolute;
-    left: 95.6%;
-    right: 2.45%;
-    top: 3.16%;
-    bottom: 94.32%;
-    height: 20px;
-    width: 12.33px;
-    text-align: center;
-    align-items: center;
-    line-height: 15px;
+}
+.login-btn{
+    border: none;
+    border-radius: .5rem;
+    height: 3rem;
+    width:100% ;
     font-size: 24px;
-    cursor: pointer;
-    font-weight: 700;
+background-color: #5683F6;
+color: #ffffff;
 }
-.popup svg {    
-    margin-left: 255px;
-    top: 140px;
+.signup-link{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
 }
-
-/* page responsiveness*/
-@media screen and (max-width: 1000px) {
-    .r-container {
-        max-width: 700px;       
-        left: 95px;
-        top: 30px;
-    }
-    form {
-        margin-left: 50px;
-    }
-    form .dtype input{
-        width: 580px;
-
-    }
-    form .name input {
-        width: 260px;
-    }
-    button{
-        width: 580px;
-    }
-    .popup{
-        left: 150px;
-    }  
+.signup-link>span>a{
+    color: #5683F6;
+    opacity: .8;
 }
-@media screen and (max-width: 767px)
-{
-    .r-container {
-        max-width: 700px;       
-        left: 0px;
-        top: 30px;
-    }
-    .popup{
-        width: 613px;
-        left: 10px;
-    }
+.reset{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0 1rem 0;
+}
+.signup__{
+    margin: 1rem;
+}
+.reset>button{
+    width: 14rem;
 
 }
-@media screen and (max-width: 590px) {
-    .r-container {        
-        left: 0px;
-        top: 30px;
+.users>a{
+color: #5683F6;
+opacity: .8;
+}
+@media screen and (max-width:368px){
+    .new-pass{
+        width: 250px;
     }
-    form {
-        margin-left: 10px;
-    }
-    form .dtype input{
-        width: 440px;        
-    }
-    form .name input {
-        width: 215px;
-    }
-    button{
-        width: 450px;
-    }
-    .rem{
-        display: block;
-        justify-content: space-between ;        
-    }
-    .popup{
-        width: 475px;
-        left: 10px;
-    }
-
-    .pop-form input{
-        width: 450px;
-    }
-    .reset button{
-        margin-left: 90px;        
-    }
-    .reset-pass button{
-        margin-top: 20px;
-        margin-left: 90px; 
-    }
-    .popup .pop-form input{
-        height: 40px;
-    }
-    #btn{
-        height: 40px;
-        margin-top: 0;
-    }
-
-    
 }
