@@ -1,6 +1,6 @@
 # Project Title
 
-qr_gen
+qr_gen click [here]( http://qrgen.cockroach.infratradetechnology.com) to visit the 
 
 ## Table of Content
 
@@ -181,64 +181,50 @@ we are sure our users will have a smooth experince when using the website
                               CONTRIBUTORS
 FULL-NAME                                                    
 Olalere olalekan khalid                                      
-GITHUB-USERNAME
-Khalid8789
+GITHUB-USERNAME-[Khalid8789](https://GitHub.com/Khalid8789)
 
 FULL-NAME 
 Adebowale Femi Samson 
-GITHUB-USERNAME
-afemsonic
+GITHUB-USERNAME-[afemsonic](https://GitHub.com/afemsonic)
 
 FULL-NAME 
 Aminu Shaibu 
-
-GITHUB-USERNAME
-elameen37
+GITHUB-USERNAME-[elameen37](https://GitHub.com/elameen37)
 FULL-NAME 
 Ligali Sekinat Itunu 
-GITHUB-USERNAME
-kiinat
+GITHUB-USERNAME-[kiinat](https://GitHub.com/kiinat)
 
 FULL-NAME
 jeremiah Ezarafe
-GITHUB-USERNAME
- Shooga0007
+GITHUB-USERNAME-[Shooga0007](https://github.com/Shooga0007)
  
 FULL-NAME
 farouk yusuf abiola                                           
-GITHUB-USERNAME
-FabioTECH1
+GITHUB-USERNAME-[FabioTECH1](https://github.com/FabioTECH1)
 
 Adepoju adeyemi Samuel                                       
-GITHUB-USERNAME
-Sammydepoj
+GITHUB-USERNAME-[Sammydepoj](https://GitHub.com/Sammydepoj)
 
 Omojole aishat eniola                                        
-GITHUB-USERNAME
- Omojole
+GITHUB-USERNAME-[Omojole](https://GitHub.com/Omojole)
  
  FULL-NAME
 Biragbara Baridoo Saro                                       
-GITHUB-USERNAME
-Sarodcreator
+GITHUB-USERNAME-[Sarodcreator](https://github.com/Sarodcreator)
 
 FULL-NAME
 zoe frempong 
-GITHUB-USERNAME
-sakyifrempong
+GITHUB-USERNAME-[sakyifrempong](https://GitHub.com/sakyifrempong)
 
 FULL-NAME
 faith adeoye  
-GITHUB-USERNAME
-ephhay1
+GITHUB-USERNAME-[ephhay1](https://GitHub.com/ephhay1)
 
 FULL-NAME
 oyetunde adeola antonia
-GITHUB-USERNAME
- webathonic
+GITHUB-USERNAME-[webathonic](https://GitHub.com/webathonic)
 
 FULL-NAME
 OTUBU ANITA JOY
-GITHUB-USERNAME 
-designita2
+GITHUB-USERNAME-[designita2](https://GitHub.com/designita2)
 
