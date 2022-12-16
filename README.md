@@ -1,6 +1,8 @@
 # Project Title
 
-qr_gen click [here]( http://qrgen.cockroach.infratradetechnology.com) to visit the 
+qr_gen
+## Live link
+ click [here]( http://qrgen.cockroach.infratradetechnology.com) to visit the website 
 
 ## Table of Content
 
